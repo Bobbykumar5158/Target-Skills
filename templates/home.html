@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="main-content-wrapper">
+
+    <header class="hero">
+        <h1>Find Your Path. Master the Skills. <br><span class="text-gradient">Land Your Dream Job.</span></h1>
+        <p>Discover the exact tech stacks and soft skills top companies are hiring for right now, then instantly generate a personalized learning roadmap to succeed.</p>
+        
+        <form action="/search" method="POST" class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" name="company_name" placeholder="Enter a Company Name (e.g., Google, Amazon, Airbnb...)">
+        </form>
+        
+    </header>
+
+    <section class="features-grid">
+        <div class="feature-card">
+            <span class="feature-icon">👁️</span>
+            <h3>Company Skill Insights</h3>
+            <p>Explore exactly what framework combinations and technical standards are needed at any enterprise.</p>
+        </div>
+        
+        <div class="feature-card">
+            <span class="feature-icon">🗺️</span>
+            <h3>Dynamic Roadmaps</h3>
+            <p>Generate milestone-based, step-by-step learning paths for any target skill on demand.</p>
+        </div>
+        
+        <div class="feature-card">
+            <span class="feature-icon">📚</span>
+            <h3>Resource Mapping</h3>
+            <p>Access curated links, official documentation, and exercises targeted to every development stage.</p>
+        </div>
+    </section>
+
+</div>
+{% endblock %}  
