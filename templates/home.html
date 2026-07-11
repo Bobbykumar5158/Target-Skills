@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block style %}
+<link rel="stylesheet" href="{{url_for('static',filename = 'style/home.css')}}">
+{% endblock %}
+
 {% block content %}
 <div class="main-content-wrapper">
 
@@ -7,10 +11,7 @@
         <h1>Find Your Path. Master the Skills. <br><span class="text-gradient">Land Your Dream Job.</span></h1>
         <p>Discover the exact tech stacks and soft skills top companies are hiring for right now, then instantly generate a personalized learning roadmap to succeed.</p>
         
-        <form action="/search" method="POST" class="search-container">
-            <span class="search-icon">🔍</span>
-            <input type="text" name="company_name" placeholder="Enter a Company Name (e.g., Google, Amazon, Airbnb...)">
-        </form>
+        <a href="{{url_for('explore')}}" class="btn-primary-action">Begin Search <span class="search-icon">🔍</span></a>
         
     </header>
 
