@@ -1,0 +1,532 @@
+/* ==========================================================================
+   🎨 BRIGHT ICE-BLUE & CONTRASTING WHITE/TINTED UI RESET
+   ========================================================================== */
+:root {
+    --bg-gradient: linear-gradient(180deg, #f3f8fc 0%, #e6f0fa 100%);
+    --text-main: #1e293b;       
+    --text-muted: #64748b;      
+    --brand-blue: #2563eb;      
+    --card-bg-white: #ffffff;
+    --card-bg-tint: #f1f7fc;    
+    
+    --container-shadow: 0 20px 50px rgba(37, 99, 235, 0.04);
+    --border-clean: #e2e8f0;
+    --border-accent: #cbd5e1;
+}
+
+/* ==========================================================================
+   🎛️ TRACK SELECTOR PILLS STRIP
+   ========================================================================== */
+.dashboard-page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem 3.5rem 2rem; 
+}
+
+.track-selector-strip {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+    background: var(--card-bg-white);
+    padding: 0.85rem 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-clean);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.selector-label {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.selector-pills {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pill-toggle-btn {
+    background: var(--card-bg-white);
+    border: 1px solid var(--border-clean);
+    color: var(--text-main);
+    padding: 0.6rem 1.35rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pill-toggle-btn:hover {
+    border-color: var(--brand-blue);
+    color: var(--brand-blue);
+}
+
+.pill-toggle-btn.active {
+    background: var(--brand-blue);
+    border-color: var(--brand-blue);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+/* ==========================================================================
+   📑 DYNAMIC HERO HEADING AREA
+   ========================================================================== */
+.workspace-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.hero-badge-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.ui-level-badge, 
+.ui-time-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.35rem 0.85rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-clean);
+}
+
+.ui-level-badge { 
+    background: rgba(37, 99, 235, 0.08); 
+    color: var(--brand-blue); 
+    border-color: rgba(37, 99, 235, 0.15);
+}
+
+.ui-time-badge { 
+    background: var(--card-bg-white); 
+    color: var(--text-main); 
+}
+
+.workspace-hero h2 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: var(--text-main);
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+
+.workspace-hero p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   🏢 MAIN WHITE WRAPPER CARDS
+   ========================================================================== */
+.workspace-twin-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+@media (max-width: 1024px) {
+    .workspace-twin-grid { grid-template-columns: 1fr; }
+}
+
+.curriculum-pipeline-card, 
+.curriculum-sidebar-card {
+    background: var(--card-bg-white);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: var(--container-shadow);
+    border: 1px solid var(--border-clean);
+}
+
+.card-title-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-clean);
+    padding-bottom: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.card-title-header h3, 
+.curriculum-sidebar-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+}
+
+.count-pill {
+    font-size: 0.8rem;
+    background: #f1f5f9;
+    color: var(--text-muted);
+    padding: 0.3rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 700;
+    border: 1px solid var(--border-clean);
+}
+
+/* ==========================================================================
+   📉 ROADMAP VERTICAL AXIS LINES
+   ========================================================================== */
+.pipeline-tree-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.pipeline-phase-block {
+    border-left: 2px solid var(--border-accent);
+    padding-left: 2.5rem;
+    position: relative;
+    margin-left: 0.75rem;
+}
+
+.phase-node-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.node-number-circle {
+    width: 36px;
+    height: 36px;
+    background: var(--card-bg-white);
+    border: 3px solid var(--brand-blue);
+    color: var(--brand-blue);
+    font-weight: 800;
+    font-size: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -19px;
+    box-shadow: 0 0 0 6px var(--card-bg-white);
+}
+
+.node-title-group {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.node-title-group h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+}
+
+.node-duration-pill {
+    font-size: 0.8rem;
+    background: var(--card-bg-white);
+    border: 1px solid var(--border-clean);
+    padding: 0.2rem 0.65rem;
+    border-radius: 6px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.phase-objective-banner {
+    background: var(--card-bg-tint); 
+    border: 1px solid #d0e1fd;
+    border-left: 4px solid var(--brand-blue);
+    padding: 1.25rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   📝 DETAILED INTERIOR STEP CARDS (Attention-Seeking Tints)
+   ========================================================================== */
+.phase-steps-vertical-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step-detail-card {
+    background: var(--card-bg-tint); 
+    border: 1px solid #d8e6f5;
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.step-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+}
+
+.step-number-tag {
+    background: var(--brand-blue);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+}
+
+.step-card-header h5 {
+    font-size: 1.15rem;
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.subtopics-section-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.section-micro-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.5rem;
+}
+
+.subtopics-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.subtopic-inline-pill {
+    background: var(--card-bg-white);
+    color: #475569;
+    border: 1px solid var(--border-clean);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.35rem 0.85rem;
+    border-radius: 8px;
+}
+
+.blueprint-action-panel, 
+.blueprint-resources-panel {
+    background: var(--card-bg-white);
+    border: 1px solid var(--border-clean);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+}
+
+.blueprint-action-panel h6, 
+.blueprint-resources-panel h6 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--brand-blue);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+}
+
+.blueprint-action-panel p {
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.6;
+}
+
+.simple-resource-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.simple-resource-list li {
+    font-size: 0.9rem;
+    color: #334155;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.simple-resource-list li::before {
+    content: "•";
+    color: var(--brand-blue);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   🚀 HIGH-APPEAL SIDEBAR CAPSTONES (BRIGHT INTERIOR CONTRAST)
+   ========================================================================== */
+.curriculum-sidebar-card.high-appeal-capstones {
+    background: var(--card-bg-white);
+    padding: 2.25rem 1.75rem;
+}
+
+.high-appeal-capstones .sidebar-header-row {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-clean);
+    padding-bottom: 1rem;
+}
+
+.high-appeal-capstones h3 i {
+    color: var(--brand-blue);
+    margin-right: 0.25rem;
+}
+
+.capstone-projects-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.capstone-feature-box {
+    display: flex;
+    background: #eff6ff; 
+    border: 1px solid #bfdbfe; 
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.capstone-feature-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.08);
+    border-color: #3b82f6;
+}
+
+.capstone-accent-bar {
+    width: 6px;
+    background: var(--brand-blue);
+    flex-shrink: 0;
+}
+
+.capstone-content-area {
+    padding: 1.25rem 1.5rem;
+    flex-grow: 1;
+}
+
+.capstone-content-area .box-meta-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    gap: 1rem;
+}
+
+.capstone-content-area h4 {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+.inner-comp-badge.badge-advanced,
+.inner-comp-badge.badge-hard {
+    background: #ffffff;
+    color: #ef4444;
+    border-color: #fecaca;
+}
+
+.inner-comp-badge.badge-intermediate,
+.inner-comp-badge.badge-medium {
+    background: #ffffff;
+    color: #f59e0b;
+    border-color: #fde68a;
+}
+
+.inner-comp-badge.badge-beginner,
+.inner-comp-badge.badge-easy {
+    background: #ffffff;
+    color: #10b981;
+    border-color: #a7f3d0;
+}
+
+.project-desc {
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.project-card-footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(59, 130, 246, 0.15);
+    padding-top: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.footer-meta-item {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--brand-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+/* ==========================================================================
+   📊 CLEAN SIDEBAR COMPONENT METADATA
+   ========================================================================== */
+.sidebar-meta-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-explainer {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin: 0.4rem 0 1.25rem 0;
+}
+
+.sidebar-bullet-list {
+    list-style: none;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sidebar-bullet-list li {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.bullet-marker {
+    width: 6px;
+    height: 6px;
+    background: var(--brand-blue);
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+}
+
+.sidebar-bullet-list p {
+    font-size: 0.9rem;
+    color: #334155;
+    line-height: 1.5;
+}
+
+.sidebar-empty-box {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #94a3b8;
+}

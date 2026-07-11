@@ -3,7 +3,6 @@ from genai import bot
 import json
 import os
 import threading
-import time
 
 app = Flask(__name__)
 app.secret_key = "secrect_key"
@@ -16,12 +15,12 @@ def generate_roadmap(role_title):
             with open(filepath, "r") as file:
                 roadmaps = json.load(file)
         except json.JSONDecodeError:
-            roadmaps = []
+            roadmaps = {"title" : []}
     else:
         roadmaps = []
 
-    roadmap = bot(role_title)
-
+    response = json.loads(bot(role_title))
+    roadmap = response["response"]
     with open("data/user.json","w") as file:
         if roadmaps:
             roadmaps.append(roadmap)
@@ -52,11 +51,11 @@ def explore():
             fetched_data = roles_data.get("response", [])
         else:
             # will call bot here
-            fetched_data = {} # genai data
-            # NOTE when fetching bot data add company name to it before writing it to file
-            time.sleep(1) # time taken by bot to response
+            bot_data = json.loads(bot(company_name))
+            bot_data["company"] = company_name
+            fetched_data = bot_data["response"]
             with open('data/roles.json','w') as file:
-                json.dump(fetched_data,file)
+                json.dump(bot_data,file)
 
 
 
@@ -91,7 +90,11 @@ def roadmap():
         
     return redirect(url_for("explore"))
 
-
+@app.route("/dashboard")
+def dashboard():
+    with open("data/user.json","r") as file:
+        tracks = json.load(file)
+    return render_template("dashboard.html",user_tracks = tracks)
 
 if __name__ == "__main__":
     app.run(debug=True)

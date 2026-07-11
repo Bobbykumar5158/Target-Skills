@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{url_for('static',filename = 'style/dashboard.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="dashboard-page-wrapper">
+
+    <div class="track-selector-strip">
+        <span class="selector-label"><i class="fa-solid fa-layer-group"></i> Active Learning Tracks:</span>
+        <div class="selector-pills">
+            {% for track in user_tracks %}
+            <button class="pill-toggle-btn {% if loop.first %}active{% endif %}"
+                onclick="switchWorkspaceView('track-view-{{ loop.index }}', this)">
+                {{ track.title }}
+            </button>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% for track in user_tracks %}
+    <div id="track-view-{{ loop.index }}" class="track-main-workspace" {% if not loop.first
+        %}style="display: none;{% endif %}">
+
+        <div class="workspace-hero">
+            <div class="hero-badge-row">
+                <span class="ui-level-badge">{{ track.difficulty }} Level</span>
+                <span class="ui-time-badge"><i class="fa-regular fa-clock"></i> {{ track.estimatedTimeCommitment }}
+                    Commitment</span>
+            </div>
+            <h2>Mastering {{ track.title }}</h2>
+            <p>Follow your sequential architectural milestones below to build production-ready core proficiencies.</p>
+        </div>
+
+        <div class="workspace-twin-grid">
+
+            <div class="curriculum-pipeline-card">
+                <div class="card-title-header">
+                    <h3><i class="fa-solid fa-list-check"></i> Milestone Learning Roadmap</h3>
+                    <span class="count-pill">{{ track.roadmap | length }} Main Phases</span>
+                </div>
+
+                <div class="pipeline-tree-container">
+                    {% for phase in track.roadmap %}
+                    <div class="pipeline-phase-block">
+
+                        <div class="phase-node-header">
+                            <div class="node-number-circle">{{ phase.phaseNumber }}</div>
+                            <div class="node-title-group">
+                                <h4>Phase {{ phase.phaseNumber }}: {{ phase.phaseTitle }}</h4>
+                                <span class="node-duration-pill">⏱️ {{ phase.estimatedDuration }}</span>
+                            </div>
+                        </div>
+
+                        <div class="phase-objective-banner">
+                            <strong>Milestone Objective:</strong> {{ phase.milestoneObjective }}
+                        </div>
+
+                        <div class="phase-steps-vertical-stack">
+                            {% for step in phase.steps %}
+                            <div class="step-detail-card">
+                                <div class="step-card-header">
+                                    <span class="step-number-tag">Step {{ step.stepNumber }}</span>
+                                    <h5>{{ step.topic }}</h5>
+                                </div>
+
+                                <div class="subtopics-section-wrapper">
+                                    <span class="section-micro-label">Key Subtopics</span>
+                                    <div class="subtopics-tag-cloud">
+                                        {% for subtopic in step.keySubtopics %}
+                                        <span class="subtopic-inline-pill">{{ subtopic }}</span>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+
+                                <div class="blueprint-action-panel">
+                                    <h6>Action Plan Execution</h6>
+                                    <p>{{ step.actionPlan }}</p>
+                                </div>
+
+                                <div class="blueprint-resources-panel">
+                                    <h6>Recommended Repositories</h6>
+                                    <ul class="simple-resource-list">
+                                        {% for resource in step.recommendedResources %}
+                                        <li>{{ resource }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="sidebar-meta-stack">
+
+                <div class="curriculum-sidebar-card high-appeal-capstones">
+                    <div class="sidebar-header-row">
+                        <h3><i class="fa-solid fa-laptop-code"></i> Core Capstone Projects</h3>
+                        <p class="sidebar-explainer">Deploy these comprehensive terminal architectures to solidify and
+                            validate your pipeline skills.</p>
+                    </div>
+
+                    <div class="capstone-projects-stack">
+                        {% for project in track.capstoneProjects %}
+                        <div class="capstone-feature-box">
+                            <div class="capstone-accent-bar"></div>
+
+                            <div class="capstone-content-area">
+                                <div class="box-meta-top">
+                                    <h4>{{ project.projectName }}</h4>
+                                    <span class="inner-comp-badge badge-{{ project.complexity | lower }}">{{
+                                        project.complexity }}</span>
+                                </div>
+                                <p class="project-desc">{{ project.projectDescription }}</p>
+
+                                <div class="project-card-footer">
+                                    <span class="footer-meta-item"><i class="fa-solid fa-square-check"></i> Terminal
+                                        Validation</span>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+
+                <div class="curriculum-sidebar-card">
+                    <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Strategy Pro-Tips</h3>
+                    <ul class="sidebar-bullet-list">
+                        {% for tip in track.proTipsForSuccess %}
+                        <li><span class="bullet-marker"></span>
+                            <p>{{ tip }}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    {% endfor %}
+
+</div>
+
+<script src="{{ url_for('static',filename = 'script/dashboard.js')}}"></script>
+{% endblock %}
