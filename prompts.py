@@ -17,6 +17,7 @@ IF INPUT = COMPANY NAME: Output 7-10 engineering roles using this schema:
 
 IF INPUT = TECHNICAL SKILL: Generate a beginner-to-advanced roadmap using this schema (do NOT repeat root skill name inside the roadmap array):
 {
+  "title" : "TECHNICAL SKILL NAME"
   "difficulty": "1-word (e.g., Beginner/Intermediate/Advanced)",
   "estimatedTimeCommitment": "Duration",
   "roadmap": [
