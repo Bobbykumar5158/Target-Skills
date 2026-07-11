@@ -1,0 +1,452 @@
+:root {
+    --primary-blue: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg-main: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --success-green: #10b981;
+    --success-bg: #ecfdf5;
+    --salary-gold: #b45309;
+    --salary-bg: #fef3c7;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+/* ==========================================
+   Header & Search Box Setup
+   ========================================== */
+.search-page-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.step-indicator {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+}
+
+.search-page-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0.5rem 0 2rem 0;
+    color: #0f172a;
+}
+
+.search-form {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.25s ease;
+}
+
+.search-container:focus-within {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.search-icon {
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+    user-select: none;
+}
+
+.search-container input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    background: transparent;
+    padding: 0.5rem 0;
+}
+
+.search-container input::placeholder {
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   Results & Dynamic Grid System
+   ========================================== */
+.results-container {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.results-title {
+    font-size: 1.35rem;
+    color: #334155;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.blue-text {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+}
+
+/* ==========================================
+   Role Card Layout
+   ========================================== */
+.role-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.role-card h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.4;
+}
+
+.role-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
+}
+
+.role-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Badges Styling */
+.status-badge, .salary-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-badge {
+    background-color: var(--success-bg);
+    color: var(--success-green);
+}
+
+.indicator-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--success-green);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.salary-badge {
+    background-color: var(--salary-bg);
+    color: var(--salary-gold);
+}
+
+.salary-icon {
+    margin-right: 0.35rem;
+}
+
+/* Action Button */
+.btn-view-skills {
+    width: 100%;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.btn-view-skills:hover {
+    background-color: var(--primary-hover);
+}
+
+/* ==========================================
+   Empty Placeholder State
+   ========================================== */
+.placeholder-cards-mockup {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    opacity: 0.35;
+    pointer-events: none;
+    margin-top: 4rem;
+}
+
+.mock-card {
+    background: #e2e8f0;
+    border: 2px dashed #cbd5e1;
+    border-radius: 16px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #475569;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.centered-mock {
+    background: #cbd5e1;
+    border-style: solid;
+    color: #0f172a;
+}
+
+
+/* ==========================================
+   Loading Overlay & Spinner Animation
+   ========================================== */
+#loadingOverlay {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    transition: opacity 0.3s ease;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--primary-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Keyframe Animations */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   Responsive Adaptability (Mobile Viewports)
+   ========================================== */
+@media (max-width: 640px) {
+    .search-page-header h2 {
+        font-size: 1.85rem;
+    }
+    
+    .roles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-content-wrapper {
+        padding: 1.5rem 1rem;
+    }
+}
+.search-page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.step-indicator {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #64748b;
+}
+
+/* ==========================================
+   THE MODERN DASHBOARD MODAL UPGRADE
+   ========================================== */
+
+/* 1. Clear Viewport Layer Overlay Wrapper */
+.role-details-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(15, 23, 42, 0.4); /* Subtle premium dimming */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: none; /* Toggled to 'flex' via your JS execution */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    padding: 1rem;
+}
+
+/* 2. Enhanced Card Component Box */
+.details-content-box {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px; /* Modern curved radius scale */
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.15); /* Soft premium shadow depth */
+    position: relative;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* 3. Clean Text Hierarchy Rules */
+.details-content-box h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    margin-right: 2rem; /* Prevents text colliding with X icon */
+}
+
+.overlay-desc {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+/* 4. Unified Grid/Flex Section Rows */
+.details-section {
+    margin-bottom: 1.5rem;
+}
+
+.details-section h4 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #94a3b8; /* Subtler label text */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+/* 5. Clean Interface Pill Badges Layout */
+.tech-tags-wrapper, .company-tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag, .company-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.75rem;
+    border-radius: 8px; /* Standard border-radius match */
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: #f8fafc;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+/* Interactive feedback on hovering badges */
+.tech-tag:hover, .company-tag:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+}
+
+/* Language badges contrast pop rules */
+.tech-tag.language-accent {
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #dbeafe;
+}
+.tech-tag.language-accent:hover {
+    background: #dbeafe;
+}
+
+/* 6. Refined UI Operations Elements */
+.close-overlay-btn {
+    position: absolute;
+    top: 1.5rem; right: 1.5rem;
+    background: #f1f5f9;
+    border: none;
+    font-size: 0.75rem;
+    width: 2rem; height: 2rem;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.close-overlay-btn:hover {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.btn-generate-roadmap {
+    width: 100%;
+    background: #0f172a; /* Premium Dark Theme Matte Slate */
+    color: #ffffff;
+    border: none;
+    padding: 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 2rem;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+    transition: all 0.2s ease;
+}
+.btn-generate-roadmap:hover {
+    background: #1e293b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.2);
+}
+
+.dashboard-notice-text {
+    font-size: 0.8rem;
+    color: #64748b; /* Soft grey text */
+    text-align: center;
+    margin-top: 0.75rem;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.alert-banner {
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Category matches the "success" parameter tag from Python */
+.alert-success {
+    background-color: #ecfdf5; 
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+}

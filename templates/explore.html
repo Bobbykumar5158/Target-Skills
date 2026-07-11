@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{url_for('static',filename = 'style/explore.css')}}">
+{% endblock %}
+
+{% block script %}
+<script src="{{url_for('static',filename='script/explore.js')}}" defer></script>
+{% endblock %}
+
+{% block content %}
+<div class="main-content-wrapper">
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert-banner alert-{{ category }}">
+              <span>{{ message }}</span>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <div class="search-page-header">
+        <span class="step-indicator">SEARCH COMPANY PROFILES</span>
+        <h2>Find your Target</h2>
+
+        <form action="{{url_for('explore')}}" method="POST" class="search-form" onsubmit="showLoader()">
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="company_name"
+                    placeholder="{{ company if company else 'Enter a Company Name (e.g., Google, Amazon, Airbnb...)'}}"
+                    required value="{{ company if company else '' }}">
+            </div>
+        </form>
+    </div>
+
+    {% if data %}
+    <div class="results-container">
+        <h3 class="results-title">Open Roles identified at <span class="blue-text">{{ company }}</span>:</h3>
+        <div class="roles-grid">
+            {% for role in data %}
+            <div class="role-card">
+                <h3>{{ role["title"] }}</h3>
+                <p class="role-desc">{{ role.description }}</p>
+                <div class="role-meta-row">
+                    <div class="status-badge status-open">
+                        <span class="indicator-dot"></span>
+                        Hiring: {{role["hiringStatus"]}}
+                    </div>
+
+                    <div class="salary-badge">
+                        <span class="salary-icon">💰</span>
+                        Est. {{role["expectedSalary"]}} / yr
+                    </div>
+                </div>
+                <button type="button" class="btn-view-skills"
+                    onclick="toggleDetails('model-{{loop.index}}', true)">Details</button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+    <div class="empty-state-container">
+        <div class="placeholder-cards-mockup">
+            <div class="mock-card">Backend Engineer</div>
+            <div class="mock-card centered-mock">Search above to populate job roles</div>
+            <div class="mock-card">Frontend Developer</div>
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+
+{% for role in data %}
+<div class="role-details-overlay" id="model-{{loop.index}}">
+    <div class="details-content-box">
+        <button type="button" class="close-overlay-btn"
+            onclick="toggleDetails('model-{{loop.index}}', false)">X</button>
+
+        <h3>{{ role["title"] }}</h3>
+        <p class="overlay-desc">{{ role.description }}</p>
+
+        <div class="details-section">
+            <h4>Companies:</h4>
+            <div class="company-tags-wrapper">
+                {% for company in role.companies %}
+                <span class="company-tag">{{ company }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="details-section">
+            <h4>Languages Required:</h4>
+            <div class="tech-tags-wrapper">
+                {% for lang in role.languages %}
+                <span class="tech-tag language-accent">{{ lang }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="details-section">
+            <h4>Infrastructure & Tech Stack:</h4>
+            <div class="tech-tags-wrapper">
+                {% for tech in role.tech %}
+                <span class="tech-tag">{{ tech }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <form action="{{ url_for('roadmap') }}" method="POST" class="roadmap-action-form">
+            <input type="hidden" name="role_title" value="{{ role['title'] }}">
+            <input type="hidden" name="company_name" value="{{ company }}">
+            
+            <button type="submit" 
+                class="btn-generate-roadmap" 
+                onclick="toggleDetails('model-{{loop.index}}',false)">
+                Add to Profile
+            </button>
+
+            <p class="dashboard-notice-text">Your personalized roadmap will be generated and saved to your dashboard.</p>
+        </form>
+    </div>
+</div>
+{% endfor %}
+
+<div id="loadingOverlay"
+    style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;  justify-content:center; align-items:center; flex-direction:column; z-index:9999;">
+    <div class="spinner"></div>
+    <p style="margin-top:1rem; font-weight:600; color:#1e293b;">Fetching Data...</p>
+</div>
+
+
+{% endblock %}
