@@ -166,10 +166,6 @@
                 <span class="status-badge processing">Processing... ⏳</span>
             </div>
             <p class="card-desc">Your Roadmap is generating.</p>
-            <form action="{{ url_for('delete_roadmap') }}" method="POST">
-                <input type="hidden" name="track_id" value="{{ track }}">
-                <button type="submit" class="delete-track-btn link-style-btn">Delete Roadmap</button>
-            </form>
         </div>
         {% else %}
         <div class="roadmap-card">

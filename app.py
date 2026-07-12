@@ -10,22 +10,21 @@ app.secret_key = "secrect_key"
 user_file = "data/user.json"
 roles_file = "data/roles.json"
 
-def generate_roadmap(role_title,attempt = 3):
+def generate_roadmap(role_title):
 
+    title_key = role_title.lower().replace(" ", "_").strip()
     roadmaps = read_data(user_file)
-    if attempt != 0 :
-        response = json.loads(bot(role_title))
-        if response["status_code"] == 200:
-            roadmap = response["response"]
-            title_key = role_title.lower().replace(" ", "_")
-            roadmaps[title_key]["status"] = "True"
-            roadmaps[title_key]["roadmap"] = roadmap
+    response = json.loads(bot(role_title))
+    print(response)
+    if response["status_code"] == 200:
+        roadmap = response["response"]
+        roadmaps[title_key]["status"] = "True"
+        roadmaps[title_key]["roadmap"] = roadmap
+        write_data(user_file, roadmaps)
 
-        else:
-            time.sleep(10)
-            generate_roadmap(role_title,attempt-1)
     else :
         roadmaps[title_key]["status"] = "None"
+        write_data(user_file, roadmaps)
         
         
             
@@ -75,18 +74,19 @@ def roadmap():
 
         flash("Target Added! Your roadmap will be available on your dashboard .", "success")
         
+        roadmaps = read_data(user_file)
+        title_key = role.lower().replace(" ", "_").strip()
+        roadmaps[title_key] = {
+            "status" : "False",
+            "roadmap" : {}
+        }
+        write_data(user_file,roadmaps)
+
         task = threading.Thread(
             target=generate_roadmap, 
             args=(role,)
             )
         task.start()
-
-        roadmaps = read_data(user_file)
-        title_key = role.lower().replace(" ", "_")
-        roadmaps[title_key] = {
-            "status" : "False",
-            "roadmap" : {}
-        }
         
         return redirect(url_for("explore",company = company_name))
         

@@ -1,181 +1,179 @@
 {
-  "status_code": 200,
-  "company" : "Google",
-  "response": [
-    {
-      "title": "Senior Software Engineer, Distributed Systems",
-      "languages": [
-        "C++",
-        "Go",
-        "Java"
-      ],
-      "tech": [
-        "Spanner (distributed database)",
-        "Colossus (storage)",
-        "Borg (orchestration)",
-        "gRPC (communication protocol)"
-      ],
-      "description": "Design and scale globally-distributed backend infrastructure power search, ads, and core cloud services.",
-      "expectedSalary": "$190,000 - $280,000 USD",
-      "hiringStatus": "Selective",
-      "companies": [
-        "Google",
-        "Meta",
-        "Microsoft"
-      ]
-    },
-    {
-      "title": "Site Reliability Engineer (SRE)",
-      "languages": [
-        "Python",
-        "Go",
-        "Bash"
-      ],
-      "tech": [
-        "Kubernetes (container orchestration)",
-        "Borg (cluster management)",
-        "Prometheus (monitoring)",
-        "Linux Kernel"
-      ],
-      "description": "Ensure ultra-high availability and performance of Googleservices using software engineering solutions.",
-      "expectedSalary": "$160,000 - $240,000 USD",
-      "hiringStatus": "Active",
-      "companies": [
-        "Google",
-        "Meta",
-        "Netflix"
-      ]
-    },
-    {
-      "title": "Machine Learning Engineer, Google DeepMind",
-      "languages": [
-        "Python",
-        "C++"
-      ],
-      "tech": [
-        "JAX (numerical computing)",
-        "TensorFlow (ML framework)",
-        "TPU (hardware accelerators)",
-        "Gemini models"
-      ],
-      "description": "Research, scale, and integrate foundational LLMs and multimodal neural networksacross Google products.",
-      "expectedSalary": "$220,000 - $350,000 USD",
-      "hiringStatus": "Active",
-      "companies": [
-        "Google",
-        "OpenAI",
-        "Anthropic"
-      ]
-    },
-    {
-      "title": "Frontend Engineer, Search UX",
-      "languages": [
-        "TypeScript",
-        "JavaScript"
-      ],
-      "tech": [
-        "Angular (web framework)",
-        "Lit (web components)",
-        "WebAssembly (high-performance execution)",
-        "gRPC-Web"
-      ],
-      "description": "Develop and optimize highly responsive, accessible user interfaces for Search, Maps, and core portals.",
-      "expectedSalary": "$140,000 - $210,000 USD",
-      "hiringStatus": "Selective",
-      "companies": [
-        "Google",
-        "Meta",
-        "Apple"
-      ]
-    },
-    {
-      "title": "Android OS Platform Engineer",
-      "languages": [
-        "Kotlin",
-        "Java",
-        "Rust",
-        "C++"
-      ],
-      "tech": [
-        "AOSP (Android Open Source Project)",
-        "HAL (Hardware Abstraction Layer)",
-        "Linux Kernel",
-        "Binder IPC"
-      ],
-      "description": "Build next-generation OS capabilities, optimize kernel subsystems, and secure the Android hardware interface.",
-      "expectedSalary": "$170,000 - $250,000 USD",
-      "hiringStatus": "Selective",
-      "companies": [
-        "Google",
-        "Samsung",
-        "OnePlus"
-      ]
-    },
-    {
-      "title": "Security Engineer, Product Security",
-      "languages": [
-        "Go",
-        "Rust",
-        "Python"
-      ],
-      "tech": [
-        "OAuth 2.0 (authorization)",
-        "Fuzzing tools",
-        "gRPC (microservice security)",
-        "IAM (Identity Access Management)"
-      ],
-      "description": "Perform threat modeling, continuous fuzzing, and cryptographic design validations for user-facing applications.",
-      "expectedSalary": "$165,000 - $245,000 USD",
-      "hiringStatus": "Active",
-      "companies": [
-        "Google",
-        "Cloudflare",
-        "Apple"
-      ]
-    },
-    {
-      "title": "Cloud Solutions Architect, Google Cloud",
-      "languages": [
-        "Python",
-        "Go",
-        "SQL"
-      ],
-      "tech": [
-        "Google Cloud Platform (GCP)",
-        "BigQuery (data warehouse)",
-        "GKE (Google Kubernetes Engine)",
-        "Terraform (IaC)"
-      ],
-      "description": "Design secure, cloud-native enterprise architectures helping global enterprises migrate workloads to GCP.",
-      "expectedSalary": "$150,000 - $220,000 USD",
-      "hiringStatus": "Active",
-      "companies": [
-        "Google",
-        "Amazon Web Services",
-        "Microsoft"
-      ]
-    },
-    {
-      "title": "Silicon Design Verification Engineer, TPU",
-      "languages": [
-        "SystemVerilog",
-        "Python",
-        "C++"
-      ],
-      "tech": [
-        "UVM (Universal Verification Methodology)",
-        "ASIC (silicon chips)",
-        "FPGA",
-        "TPU Architecture"
-      ],
-      "description": "Validate custom Tensor Processing Units (TPU) chips through unit-level and system-level emulation.",
-      "expectedSalary": "$180,000 - $260,000 USD",
-      "hiringStatus": "Slow",
-      "companies": [
-        "Google",
-        "Nvidia",
-        "Apple"
-      ]
-    }
-  ]
+    "status_code": 200,
+    "response": [
+        {
+            "title": "Site Reliability Engineer SRE",
+            "languages": [
+                "Go",
+                "Python",
+                "C++"
+            ],
+            "tech": [
+                "Borg",
+                "Kubernetes",
+                "Prometheus",
+                "Spanner"
+            ],
+            "description": "Ensure service uptime and reliable scaling of global infrastructure.",
+            "expectedSalary": "$160,000 - $280,000 USD",
+            "hiringStatus": "Active",
+            "companies": [
+                "Google",
+                "Meta",
+                "Netflix"
+            ]
+        },
+        {
+            "title": "Software Engineer Systems",
+            "languages": [
+                "C++",
+                "Rust",
+                "Go"
+            ],
+            "tech": [
+                "gRPC",
+                "Protobuf",
+                "Linux Kernel",
+                "Fuchsia"
+            ],
+            "description": "Build high-performance operating system layers and networking infrastructure.",
+            "expectedSalary": "$155,000 - $275,000 USD",
+            "hiringStatus": "Selective",
+            "companies": [
+                "Google",
+                "Apple",
+                "Microsoft"
+            ]
+        },
+        {
+            "title": "Machine Learning Engineer Tensor Processing Units",
+            "languages": [
+                "Python",
+                "C++",
+                "CUDA"
+            ],
+            "tech": [
+                "TensorFlow",
+                "JAX",
+                "TPU",
+                "XLA Compiler"
+            ],
+            "description": "Accelerate compiler execution and optimize machine learning models for custom ASICs.",
+            "expectedSalary": "$185,000 - $315,000 USD",
+            "hiringStatus": "Active",
+            "companies": [
+                "Google",
+                "NVIDIA",
+                "Meta"
+            ]
+        },
+        {
+            "title": "Frontend Engineer YouTube Player",
+            "languages": [
+                "TypeScript",
+                "JavaScript"
+            ],
+            "tech": [
+                "Angular",
+                "Lit",
+                "WebRTC",
+                "Closure Compiler"
+            ],
+            "description": "Design modular web video components for high-efficiency media streaming.",
+            "expectedSalary": "$145,000 - $245,000 USD",
+            "hiringStatus": "Selective",
+            "companies": [
+                "Google",
+                "Netflix",
+                "Amazon"
+            ]
+        },
+        {
+            "title": "Cloud Security Architect Google Cloud Platform",
+            "languages": [
+                "Go",
+                "Python",
+                "SQL"
+            ],
+            "tech": [
+                "BeyondCorp",
+                "IAM",
+                "Cloud KMS",
+                "Google Cloud Armor"
+            ],
+            "description": "Engineer zero-trust secure authorization systems for enterprise customers.",
+            "expectedSalary": "$170,000 - $295,000 USD",
+            "hiringStatus": "Active",
+            "companies": [
+                "Google",
+                "Amazon Web Services",
+                "Azure"
+            ]
+        },
+        {
+            "title": "Android Platform Engineer",
+            "languages": [
+                "Java",
+                "Kotlin",
+                "C++"
+            ],
+            "tech": [
+                "Android Open Source Project",
+                "Android SDK",
+                "Hardware Abstraction Layer"
+            ],
+            "description": "Write OS-level framework services and driver integration layers for Android devices.",
+            "expectedSalary": "$150,000 - $260,000 USD",
+            "hiringStatus": "Slow",
+            "companies": [
+                "Google",
+                "Samsung",
+                "OnePlus"
+            ]
+        },
+        {
+            "title": "Database Engine Engineer Spanner",
+            "languages": [
+                "C++",
+                "Go"
+            ],
+            "tech": [
+                "Spanner",
+                "Colossus File System",
+                "TrueTime API",
+                "Paxos Consensus"
+            ],
+            "description": "Implement globally distributed transactional storage consistency algorithms.",
+            "expectedSalary": "$190,000 - $330,000 USD",
+            "hiringStatus": "Selective",
+            "companies": [
+                "Google",
+                "Oracle",
+                "CockroachLabs"
+            ]
+        },
+        {
+            "title": "Software Engineer Core Search",
+            "languages": [
+                "C++",
+                "Java",
+                "Python"
+            ],
+            "tech": [
+                "MapReduce",
+                "Borg",
+                "FlumeJava",
+                "Bigtable"
+            ],
+            "description": "Scale crawler pipelines and optimize indices for world-wide query evaluation.",
+            "expectedSalary": "$165,000 - $285,000 USD",
+            "hiringStatus": "Active",
+            "companies": [
+                "Google",
+                "Microsoft",
+                "Baidu"
+            ]
+        }
+    ],
+    "company": "Google"
 }
