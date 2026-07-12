@@ -117,3 +117,19 @@ main,
     background: #1d4ed8;
     transform: translateY(-2px);
 }
+
+.alert-banner {
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Category matches the "success" parameter tag from Python */
+.alert-success {
+    background-color: #ecfdf5; 
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+}

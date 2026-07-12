@@ -1,40 +1,32 @@
 from flask import Flask, request, url_for, redirect, render_template, flash
 from genai import bot
 import json
-import os
 import threading
 import time
+from DB import read_data, write_data
 
 app = Flask(__name__)
 app.secret_key = "secrect_key"
+user_file = "data/user.json"
+roles_file = "data/roles.json"
 
 def generate_roadmap(role_title,attempt = 3):
-    
-    if attempt != 0 :
-        filepath = "data/user.json"
-        if os.path.exists(filepath) and os.path.getsize(filepath) > 0:
-            try:
-                with open(filepath, "r") as file:
-                    roadmaps = json.load(file)
-            except json.JSONDecodeError:
-                roadmaps = {"title" : []}
-        else:
-            roadmaps = []
 
+    roadmaps = read_data(user_file)
+    if attempt != 0 :
         response = json.loads(bot(role_title))
         if response["status_code"] == 200:
             roadmap = response["response"]
+            title_key = role_title.lower().replace(" ", "_")
+            roadmaps[title_key]["status"] = "True"
+            roadmaps[title_key]["roadmap"] = roadmap
+
         else:
             time.sleep(10)
             generate_roadmap(role_title,attempt-1)
-            
-        with open("data/user.json","w") as file:
-            if roadmaps:
-                roadmaps.append(roadmap)
-                json.dump(roadmaps,file,indent=4)
-            else:
-                json.dump([roadmap],file,indent=4)
-            print("done")
+    else :
+        roadmaps[title_key]["status"] = "None"
+        
         
             
 
@@ -48,11 +40,7 @@ def explore():
     if request.method == "POST":
         company_name = request.form.get('company_name').strip()
 
-        try:
-            with open('data/roles.json', 'r') as file:
-                roles_data = json.load(file)
-        except (FileNotFoundError, json.JSONDecodeError):
-            roles_data = {"company": "", "response": []}
+        roles_data = read_data(roles_file)
 
         if roles_data.get("company", "").lower() == company_name.lower():
             fetched_data = roles_data.get("response", [])
@@ -61,12 +49,10 @@ def explore():
             if bot_data["status_code"] == 200:
                 bot_data["company"] = company_name
                 fetched_data = bot_data["response"]
-                with open('data/roles.json','w') as file:
-                    json.dump(bot_data,file)
+                write_data(roles_file,bot_data)
+                
             else:
                 return render_template('error.html',response = bot_data)
-
-
 
         return render_template("explore.html",data = fetched_data,company = company_name)
         
@@ -94,6 +80,13 @@ def roadmap():
             args=(role,)
             )
         task.start()
+
+        roadmaps = read_data()
+        title_key = role.lower().replace(" ", "_")
+        roadmaps[title_key] = {
+            "status" : "False",
+            "roadmap" : {}
+        }
         
         return redirect(url_for("explore",company = company_name))
         
@@ -101,9 +94,24 @@ def roadmap():
 
 @app.route("/dashboard")
 def dashboard():
-    with open("data/user.json","r") as file:
-        tracks = json.load(file)
-    return render_template("dashboard.html",user_tracks = tracks)
+    roadmaps = read_data(user_file)
+    return render_template("dashboard.html",user_tracks = roadmaps)
+
+@app.route("/delete-roadmap", methods = ['POST'])
+def delete_roadmap():
+    track_to_pop = request.form.get("track_id")
+    
+    if not track_to_pop:
+        flash("Could not resolve track identity identifier.", "error")
+        return redirect(url_for("dashboard"))
+    
+    user_data = read_data(user_file)
+    user_data.pop(track_to_pop)
+
+    # Write back the updated data clean to disk
+    write_data(user_file,user_data)
+    flash("Track removed successfully from your tracking dashboard profile.", "success")
+    return redirect(url_for("dashboard"))
 
 if __name__ == "__main__":
     app.run(debug=True)

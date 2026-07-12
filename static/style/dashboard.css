@@ -530,3 +530,77 @@
     padding: 2rem 1rem;
     color: #94a3b8;
 }
+
+.roadmap-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.roadmap-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.roadmap-card h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+/* ==========================================
+   UNIFIED BUTTON STYLE (Light Red -> Solid Red)
+   ========================================== */
+.delete-track-btn {
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    
+    /* Light Red Base State */
+    background: #fff5f5;
+    color: #e11d48;
+    border: 1px solid #fecaca;
+    
+    /* Creates the smooth fade animation loop */
+    transition: all 0.2s ease-in-out; 
+}
+
+/* Vibrant Red Hover State (Applies instantly to 1, 2, and 3!) */
+.delete-track-btn:hover {
+    background: #e11d48;
+    color: #ffffff;
+    border-color: #be123c;
+    transform: translateY(-2px); /* Subtle up-lift effect */
+}
+
+/* Layout Adjustments for the Processing / Refused Cards (2 and 3) */
+.roadmap-card .delete-track-btn {
+    width: 100%;
+    margin-top: 1rem;
+}

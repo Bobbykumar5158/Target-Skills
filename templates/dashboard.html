@@ -7,13 +7,23 @@
 {% block content %}
 <div class="dashboard-page-wrapper">
 
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert-banner alert-{{ category }}">
+        <span>{{ message }}</span>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
     <div class="track-selector-strip">
         <span class="selector-label"><i class="fa-solid fa-layer-group"></i> Active Learning Tracks:</span>
         <div class="selector-pills">
             {% for track in user_tracks %}
             <button class="pill-toggle-btn {% if loop.first %}active{% endif %}"
                 onclick="switchWorkspaceView('track-view-{{ loop.index }}', this)">
-                {{ track.title }}
+                {{ track.title().replace("_"," ") }}
             </button>
             {% endfor %}
         </div>
@@ -22,14 +32,17 @@
     {% for track in user_tracks %}
     <div id="track-view-{{ loop.index }}" class="track-main-workspace" {% if not loop.first
         %}style="display: none;{% endif %}">
+        {% if user_tracks[track]["status"] == "True" %}
+
 
         <div class="workspace-hero">
             <div class="hero-badge-row">
-                <span class="ui-level-badge">{{ track.difficulty }} Level</span>
-                <span class="ui-time-badge"><i class="fa-regular fa-clock"></i> {{ track.estimatedTimeCommitment }}
+                <span class="ui-level-badge">{{ user_tracks[track]["roadmap"].difficulty }} Level</span>
+                <span class="ui-time-badge"><i class="fa-regular fa-clock"></i> {{
+                    user_tracks[track]["roadmap"].estimatedTimeCommitment }}
                     Commitment</span>
             </div>
-            <h2>Mastering {{ track.title }}</h2>
+            <h2>Mastering {{ user_tracks[track]["roadmap"].title }}</h2>
             <p>Follow your sequential architectural milestones below to build production-ready core proficiencies.</p>
         </div>
 
@@ -38,11 +51,11 @@
             <div class="curriculum-pipeline-card">
                 <div class="card-title-header">
                     <h3><i class="fa-solid fa-list-check"></i> Milestone Learning Roadmap</h3>
-                    <span class="count-pill">{{ track.roadmap | length }} Main Phases</span>
+                    <span class="count-pill">{{ user_tracks[track]["roadmap"].roadmap | length }} Main Phases</span>
                 </div>
 
                 <div class="pipeline-tree-container">
-                    {% for phase in track.roadmap %}
+                    {% for phase in user_tracks[track]["roadmap"].roadmap %}
                     <div class="pipeline-phase-block">
 
                         <div class="phase-node-header">
@@ -106,7 +119,7 @@
                     </div>
 
                     <div class="capstone-projects-stack">
-                        {% for project in track.capstoneProjects %}
+                        {% for project in user_tracks[track]["roadmap"].capstoneProjects %}
                         <div class="capstone-feature-box">
                             <div class="capstone-accent-bar"></div>
 
@@ -132,7 +145,7 @@
                 <div class="curriculum-sidebar-card">
                     <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Strategy Pro-Tips</h3>
                     <ul class="sidebar-bullet-list">
-                        {% for tip in track.proTipsForSuccess %}
+                        {% for tip in user_tracks[track]["roadmap"].proTipsForSuccess %}
                         <li><span class="bullet-marker"></span>
                             <p>{{ tip }}</p>
                         </li>
@@ -141,12 +154,38 @@
                 </div>
 
             </div>
+            <form action="{{ url_for('delete_roadmap') }}" method="POST">
+                <input type="hidden" name="track_id" value="{{ track }}">
+                <button type="submit" class="delete-track-btn link-style-btn">Delete Roadmap</button>
+            </form>
 
         </div>
-
+        {% elif user_tracks[track]["status"] == "False" %}
+        <div class="roadmap-card">
+            <div class="card-header">
+                <span class="status-badge processing">Processing... ⏳</span>
+            </div>
+            <p class="card-desc">Your Roadmap is generating.</p>
+            <form action="{{ url_for('delete_roadmap') }}" method="POST">
+                <input type="hidden" name="track_id" value="{{ track }}">
+                <button type="submit" class="delete-track-btn link-style-btn">Delete Roadmap</button>
+            </form>
+        </div>
+        {% else %}
+        <div class="roadmap-card">
+            <div class="card-header">
+                <span class="status-badge refused">Max attempt reached </span>
+            </div>
+            <p class="card-desc">Generation failed. API limits reached.</p>
+            <form action="{{ url_for('delete_roadmap') }}" method="POST">
+                <input type="hidden" name="track_id" value="{{ track }}">
+                <button type="submit" class="delete-track-btn link-style-btn">Delete Roadmap</button>
+            </form>
+        </div>
+        {% endif %}
     </div>
-    {% endfor %}
 
+    {% endfor %}
 </div>
 
 <script src="{{ url_for('static',filename = 'script/dashboard.js')}}"></script>

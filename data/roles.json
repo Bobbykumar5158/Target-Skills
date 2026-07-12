@@ -1,1 +1,181 @@
-{"status_code": 200, "response": [{"title": "Principal Software Engineer - Azure Core", "languages": ["C++", "C#", "Go", "Rust"], "tech": ["Azure", "Hyper-V", "Kubernetes", "Linux Kernel", "gRPC"], "description": "Design and implement low-level virtualization, hypervisor capabilities, and host OS clustering for Azure Compute.", "expectedSalary": "$190,000 - $290,000 USD", "hiringStatus": "Selective", "companies": ["Microsoft", "Amazon Web Services", "Google Cloud"]}, {"title": "Senior Software Engineer - .NET Runtime", "languages": ["C#", "C++", "Assembly"], "tech": [".NET CLR", "JIT Compiler", "Garbage Collection", "MSBuild"], "description": "Optimize execution performance, memory allocation, and compilation paths of the open-source .NET runtime.", "expectedSalary": "$160,000 - $240,000 USD", "hiringStatus": "Active", "companies": ["Microsoft", "Oracle", "Red Hat"]}, {"title": "Applied AI Engineer - Azure Cognitive Services", "languages": ["Python", "C++", "TypeScript"], "tech": ["PyTorch", "ONNX Runtime", "Azure OpenAI", "DeepSpeed"], "description": "Build, fine-tune, and deploy highly scalable transformer models and LLM endpoints for enterprise cloud services.", "expectedSalary": "$175,000 - $265,000 USD", "hiringStatus": "Active", "companies": ["Microsoft", "Meta", "Google", "OpenAI"]}, {"title": "Software Engineer II - Microsoft 365 Client", "languages": ["TypeScript", "JavaScript", "C++"], "tech": ["React", "React Native", "Electron", "GraphQL", "WebAssembly"], "description": "Develop high-performance collaborative features and modern UI architecture for Teams and Office web clients.", "expectedSalary": "$135,000 - $190,000 USD", "hiringStatus": "Active", "companies": ["Microsoft", "Slack", "Meta", "Apple"]}, {"title": "Senior Systems Engineer - Xbox Platform Engine", "languages": ["C++", "HLSL"], "tech": ["DirectX 12", "Xbox OS", "PIX", "GDK", "Vulkan"], "description": "Optimize graphics subsystems, hardware-accelerated APIs, and system resources for console game engines and services.", "expectedSalary": "$155,000 - $230,000 USD", "hiringStatus": "Selective", "companies": ["Microsoft", "Sony Interactive Entertainment", "Epic Games", "NVIDIA"]}, {"title": "Software Engineer - Windows Kernel Security", "languages": ["C", "Rust", "Assembly"], "tech": ["Windows Driver Framework (WDF)", "Hyper-V Guard", "Sysinternals"], "description": "Refactor legacy kernel components into memory-safe Rust and build proactive OS-level mitigation defenses against exploits.", "expectedSalary": "$140,000 - $210,000 USD", "hiringStatus": "Active", "companies": ["Microsoft", "CrowdStrike", "Apple", "Google"]}, {"title": "Database Engineer - Azure SQL & Cosmos DB", "languages": ["C++", "C#", "SQL"], "tech": ["SQL Server Engine", "Distributed Consensus (Raft/Paxos)", "Query Optimizer"], "description": "Design distributed consensus protocols and optimize write/read paths for global-scale, multi-tenant databases.", "expectedSalary": "$165,000 - $250,000 USD", "hiringStatus": "Slow", "companies": ["Microsoft", "Oracle", "Amazon Web Services", "Snowflake"]}, {"title": "Security Software Engineer - Microsoft Defender", "languages": ["Python", "Kusto (KQL)", "C#"], "tech": ["Azure Sentinel", "Kusto Query Language", "Threat Intelligence", "MITRE ATT&CK"], "description": "Develop automated threat detection algorithms, behavioral analytics pipelines, and rapid response modules for Enterprise Security.", "expectedSalary": "$145,000 - $215,000 USD", "hiringStatus": "Active", "companies": ["Microsoft", "Palo Alto Networks", "CrowdStrike", "Cloudflare"]}], "company": "Microsoft"}
+{
+  "status_code": 200,
+  "company" : "Google",
+  "response": [
+    {
+      "title": "Senior Software Engineer, Distributed Systems",
+      "languages": [
+        "C++",
+        "Go",
+        "Java"
+      ],
+      "tech": [
+        "Spanner (distributed database)",
+        "Colossus (storage)",
+        "Borg (orchestration)",
+        "gRPC (communication protocol)"
+      ],
+      "description": "Design and scale globally-distributed backend infrastructure power search, ads, and core cloud services.",
+      "expectedSalary": "$190,000 - $280,000 USD",
+      "hiringStatus": "Selective",
+      "companies": [
+        "Google",
+        "Meta",
+        "Microsoft"
+      ]
+    },
+    {
+      "title": "Site Reliability Engineer (SRE)",
+      "languages": [
+        "Python",
+        "Go",
+        "Bash"
+      ],
+      "tech": [
+        "Kubernetes (container orchestration)",
+        "Borg (cluster management)",
+        "Prometheus (monitoring)",
+        "Linux Kernel"
+      ],
+      "description": "Ensure ultra-high availability and performance of Googleservices using software engineering solutions.",
+      "expectedSalary": "$160,000 - $240,000 USD",
+      "hiringStatus": "Active",
+      "companies": [
+        "Google",
+        "Meta",
+        "Netflix"
+      ]
+    },
+    {
+      "title": "Machine Learning Engineer, Google DeepMind",
+      "languages": [
+        "Python",
+        "C++"
+      ],
+      "tech": [
+        "JAX (numerical computing)",
+        "TensorFlow (ML framework)",
+        "TPU (hardware accelerators)",
+        "Gemini models"
+      ],
+      "description": "Research, scale, and integrate foundational LLMs and multimodal neural networksacross Google products.",
+      "expectedSalary": "$220,000 - $350,000 USD",
+      "hiringStatus": "Active",
+      "companies": [
+        "Google",
+        "OpenAI",
+        "Anthropic"
+      ]
+    },
+    {
+      "title": "Frontend Engineer, Search UX",
+      "languages": [
+        "TypeScript",
+        "JavaScript"
+      ],
+      "tech": [
+        "Angular (web framework)",
+        "Lit (web components)",
+        "WebAssembly (high-performance execution)",
+        "gRPC-Web"
+      ],
+      "description": "Develop and optimize highly responsive, accessible user interfaces for Search, Maps, and core portals.",
+      "expectedSalary": "$140,000 - $210,000 USD",
+      "hiringStatus": "Selective",
+      "companies": [
+        "Google",
+        "Meta",
+        "Apple"
+      ]
+    },
+    {
+      "title": "Android OS Platform Engineer",
+      "languages": [
+        "Kotlin",
+        "Java",
+        "Rust",
+        "C++"
+      ],
+      "tech": [
+        "AOSP (Android Open Source Project)",
+        "HAL (Hardware Abstraction Layer)",
+        "Linux Kernel",
+        "Binder IPC"
+      ],
+      "description": "Build next-generation OS capabilities, optimize kernel subsystems, and secure the Android hardware interface.",
+      "expectedSalary": "$170,000 - $250,000 USD",
+      "hiringStatus": "Selective",
+      "companies": [
+        "Google",
+        "Samsung",
+        "OnePlus"
+      ]
+    },
+    {
+      "title": "Security Engineer, Product Security",
+      "languages": [
+        "Go",
+        "Rust",
+        "Python"
+      ],
+      "tech": [
+        "OAuth 2.0 (authorization)",
+        "Fuzzing tools",
+        "gRPC (microservice security)",
+        "IAM (Identity Access Management)"
+      ],
+      "description": "Perform threat modeling, continuous fuzzing, and cryptographic design validations for user-facing applications.",
+      "expectedSalary": "$165,000 - $245,000 USD",
+      "hiringStatus": "Active",
+      "companies": [
+        "Google",
+        "Cloudflare",
+        "Apple"
+      ]
+    },
+    {
+      "title": "Cloud Solutions Architect, Google Cloud",
+      "languages": [
+        "Python",
+        "Go",
+        "SQL"
+      ],
+      "tech": [
+        "Google Cloud Platform (GCP)",
+        "BigQuery (data warehouse)",
+        "GKE (Google Kubernetes Engine)",
+        "Terraform (IaC)"
+      ],
+      "description": "Design secure, cloud-native enterprise architectures helping global enterprises migrate workloads to GCP.",
+      "expectedSalary": "$150,000 - $220,000 USD",
+      "hiringStatus": "Active",
+      "companies": [
+        "Google",
+        "Amazon Web Services",
+        "Microsoft"
+      ]
+    },
+    {
+      "title": "Silicon Design Verification Engineer, TPU",
+      "languages": [
+        "SystemVerilog",
+        "Python",
+        "C++"
+      ],
+      "tech": [
+        "UVM (Universal Verification Methodology)",
+        "ASIC (silicon chips)",
+        "FPGA",
+        "TPU Architecture"
+      ],
+      "description": "Validate custom Tensor Processing Units (TPU) chips through unit-level and system-level emulation.",
+      "expectedSalary": "$180,000 - $260,000 USD",
+      "hiringStatus": "Slow",
+      "companies": [
+        "Google",
+        "Nvidia",
+        "Apple"
+      ]
+    }
+  ]
+}

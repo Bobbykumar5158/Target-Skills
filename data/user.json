@@ -1,569 +1,578 @@
-[
-    {
-        "title": "Full Stack Development",
-        "difficulty": "Beginner",
-        "estimatedTimeCommitment": "6-8 Months",
-        "roadmap": [
-            {
-                "phaseNumber": 1,
-                "phaseTitle": "Frontend Foundations & Responsive UI",
-                "estimatedDuration": "1.5 Months",
-                "milestoneObjective": "Construct modern, accessible, and responsive web user interfaces.",
-                "steps": [
-                    {
-                        "stepNumber": 1.1,
-                        "topic": "HTML5 & CSS3 Architecture",
-                        "keySubtopics": [
-                            "Semantic HTML markup",
-                            "CSS Flexbox & Grid layouts",
-                            "Responsive media queries",
-                            "Web accessibility standards (WCAG)"
-                        ],
-                        "actionPlan": "Recreate a pixel-perfect, responsive dashboard layout from a Figma design mockup using raw semantic markup and layout rules.",
-                        "recommendedResources": [
-                            "MDN Web Docs - HTML & CSS Guides",
-                            "W3C Web Accessibility Tutorials"
-                        ]
-                    },
-                    {
-                        "stepNumber": 1.2,
-                        "topic": "JavaScript ES6+ and DOM Control",
-                        "keySubtopics": [
-                            "Asynchronous control flows (Promises, Async/Await)",
-                            "Dynamic DOM event structures",
-                            "Local storage handling",
-                            "Fetch API integrations"
-                        ],
-                        "actionPlan": "Write a multi-functional interactive task-scheduler application that fetches remote data and stores modified states within the browser.",
-                        "recommendedResources": [
-                            "JavaScript.info",
-                            "Eloquent JavaScript (Haverbeke)"
-                        ]
-                    }
-                ]
-            },
-            {
-                "phaseNumber": 2,
-                "phaseTitle": "Single Page Application Frameworks",
-                "estimatedDuration": "2 Months",
-                "milestoneObjective": "Build dynamic, performant client-side applications with managed application states.",
-                "steps": [
-                    {
-                        "stepNumber": 2.1,
-                        "topic": "Component-Driven UI with React",
-                        "keySubtopics": [
-                            "Component lifecycle and JSX",
-                            "State hook operations (useState, useEffect, useContext)",
-                            "Prop-drilling avoidance and custom hooks",
-                            "Asynchronous client actions"
-                        ],
-                        "actionPlan": "Build a real-time analytics panel interface that aggregates data from public endpoints, rendering UI updates dynamically.",
-                        "recommendedResources": [
-                            "React Dev Portal documentation",
-                            "Scrimba - Practical React Learning path"
-                        ]
-                    },
-                    {
-                        "stepNumber": 2.2,
-                        "topic": "Dynamic Navigation & Global Store Management",
-                        "keySubtopics": [
-                            "Dynamic client routing (React Router)",
-                            "State storage frameworks (Zustand or Redux Toolkit)",
-                            "Caching layer systems (TanStack Query)",
-                            "Optimization methods (useMemo, useCallback)"
-                        ],
-                        "actionPlan": "Implement a modular shopping system flow with cart persistence managed in a global store and multi-page routing.",
-                        "recommendedResources": [
-                            "Redux Toolkit Tutorials",
-                            "TanStack Query documentation"
-                        ]
-                    }
-                ]
-            },
-            {
-                "phaseNumber": 3,
-                "phaseTitle": "Backend Architectures & Database Modeling",
-                "estimatedDuration": "2 Months",
-                "milestoneObjective": "Design structured relational schemas and build server-side interfaces.",
-                "steps": [
-                    {
-                        "stepNumber": 3.1,
-                        "topic": "Server Implementations with Node.js & Express",
-                        "keySubtopics": [
-                            "Asynchronous runtime pipelines",
-                            "Custom middleware development",
-                            "RESTful API design principles",
-                            "Error propagation and status mappings"
-                        ],
-                        "actionPlan": "Build a decoupled REST API with full CRUD endpoints to handle transactions with appropriate validation and error codes.",
-                        "recommendedResources": [
-                            "Node.js learning guides",
-                            "Express.js API reference manual"
-                        ]
-                    },
-                    {
-                        "stepNumber": 3.2,
-                        "topic": "Data Modeling and Storage Engines",
-                        "keySubtopics": [
-                            "Relational architectures & constraints (PostgreSQL)",
-                            "NoSQL document systems (MongoDB)",
-                            "Database normalization vs denormalization",
-                            "Indexing execution plans"
-                        ],
-                        "actionPlan": "Write custom SQL database schemas, run migrations, and write query joins to support complex relational fetches for a backend platform.",
-                        "recommendedResources": [
-                            "PostgreSQL Official Tutorials",
-                            "MongoDB University courses"
-                        ]
-                    }
-                ]
-            },
-            {
-                "phaseNumber": 4,
-                "phaseTitle": "Application Security & Deployment Workflows",
-                "estimatedDuration": "1.5 Months",
-                "milestoneObjective": "Implement authorization workflows, deploy applications, and construct continuous pipelines.",
-                "steps": [
-                    {
-                        "stepNumber": 4.1,
-                        "topic": "API Security & Token Authentication",
-                        "keySubtopics": [
-                            "JSON Web Token (JWT) management",
-                            "Password salting & hashing (bcrypt)",
-                            "Cross-Origin Resource Sharing (CORS) rules",
-                            "HttpOnly cookies storage security"
-                        ],
-                        "actionPlan": "Add a secure authentication gate system with token rotation, storing session keys safely within secure client-side cookies.",
-                        "recommendedResources": [
-                            "OWASP Top 10 Web Risks Documentation",
-                            "Auth0 Secure Web App Guides"
-                        ]
-                    },
-                    {
-                        "stepNumber": 4.2,
-                        "topic": "Infrastructure Containerization & Hosting Pipelines",
-                        "keySubtopics": [
-                            "Dockerfile design blueprints",
-                            "Continuous deployment structures (GitHub Actions)",
-                            "Cloud host infrastructures (Render or AWS)",
-                            "Static assets storage"
-                        ],
-                        "actionPlan": "Write step-by-step pipeline configurations to compile and test components automatically, packaging assets inside minimal Docker containers.",
-                        "recommendedResources": [
-                            "Docker Getting Started manual",
-                            "GitHub Actions automation handbook"
-                        ]
-                    }
-                ]
-            }
-        ],
-        "capstoneProjects": [
-            {
-                "projectName": "Collaborative Agile Workspace Portal",
-                "complexity": "Intermediate",
-                "projectDescription": "Design and publish a Kanban task tracking platform utilizing a React client interface, Express.js server, and PostgreSQL DB. The platform handles team workspaces, drag-and-drop task items, dynamic state synchronization, and simple email notifications.",
-                "coreSkillsValidated": [
-                    "Relational Schema Design",
-                    "React Context State",
-                    "API Service Building",
-                    "CSS Layout Optimization"
-                ]
-            },
-            {
-                "projectName": "E-Commerce Market Engine with MLOps Features",
-                "complexity": "Advanced",
-                "projectDescription": "Deploy a multi-vendor digital sales engine featuring secure credit transactions (Stripe API integration), AWS S3 file hosting, user authentication gates, and dynamic catalog filtering. Packaged with Docker, deployments are tracked through a configured CI/CD process to active cloud targets.",
-                "coreSkillsValidated": [
-                    "API Integration & Payments",
-                    "S3 Asset Hosting",
-                    "Container Packaging (Docker)",
-                    "CI/CD Orchestration"
-                ]
-            }
-        ],
-        "proTipsForSuccess": [
-            "Adopt TypeScript on both the backend and frontend to minimize runtime parameter validation flaws across execution boundaries.",
-            "Draft a formal API schema specification (OpenAPI/Swagger) first before executing backend controllers.",
-            "Verify performance early by using browser profiling engines and checking relational query execution metrics.",
-            "Write clear, granular, and structured commits within your repository using standardized branch nomenclature rules."
-        ]
+{
+    "full_stack_development": {
+        "status": "True",
+        "roadmap": {
+            "title": "Full Stack Development",
+            "difficulty": "Beginner",
+            "estimatedTimeCommitment": "6-8 Months",
+            "roadmap": [
+                {
+                    "phaseNumber": 1,
+                    "phaseTitle": "Frontend Foundations & Responsive UI",
+                    "estimatedDuration": "1.5 Months",
+                    "milestoneObjective": "Construct modern, accessible, and responsive web user interfaces.",
+                    "steps": [
+                        {
+                            "stepNumber": 1.1,
+                            "topic": "HTML5 & CSS3 Architecture",
+                            "keySubtopics": [
+                                "Semantic HTML markup",
+                                "CSS Flexbox & Grid layouts",
+                                "Responsive media queries",
+                                "Web accessibility standards (WCAG)"
+                            ],
+                            "actionPlan": "Recreate a pixel-perfect, responsive dashboard layout from a Figma design mockup using raw semantic markup and layout rules.",
+                            "recommendedResources": [
+                                "MDN Web Docs - HTML & CSS Guides",
+                                "W3C Web Accessibility Tutorials"
+                            ]
+                        },
+                        {
+                            "stepNumber": 1.2,
+                            "topic": "JavaScript ES6+ and DOM Control",
+                            "keySubtopics": [
+                                "Asynchronous control flows (Promises, Async/Await)",
+                                "Dynamic DOM event structures",
+                                "Local storage handling",
+                                "Fetch API integrations"
+                            ],
+                            "actionPlan": "Write a multi-functional interactive task-scheduler application that fetches remote data and stores modified states within the browser.",
+                            "recommendedResources": [
+                                "JavaScript.info",
+                                "Eloquent JavaScript (Haverbeke)"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "phaseNumber": 2,
+                    "phaseTitle": "Single Page Application Frameworks",
+                    "estimatedDuration": "2 Months",
+                    "milestoneObjective": "Build dynamic, performant client-side applications with managed application states.",
+                    "steps": [
+                        {
+                            "stepNumber": 2.1,
+                            "topic": "Component-Driven UI with React",
+                            "keySubtopics": [
+                                "Component lifecycle and JSX",
+                                "State hook operations (useState, useEffect, useContext)",
+                                "Prop-drilling avoidance and custom hooks",
+                                "Asynchronous client actions"
+                            ],
+                            "actionPlan": "Build a real-time analytics panel interface that aggregates data from public endpoints, rendering UI updates dynamically.",
+                            "recommendedResources": [
+                                "React Dev Portal documentation",
+                                "Scrimba - Practical React Learning path"
+                            ]
+                        },
+                        {
+                            "stepNumber": 2.2,
+                            "topic": "Dynamic Navigation & Global Store Management",
+                            "keySubtopics": [
+                                "Dynamic client routing (React Router)",
+                                "State storage frameworks (Zustand or Redux Toolkit)",
+                                "Caching layer systems (TanStack Query)",
+                                "Optimization methods (useMemo, useCallback)"
+                            ],
+                            "actionPlan": "Implement a modular shopping system flow with cart persistence managed in a global store and multi-page routing.",
+                            "recommendedResources": [
+                                "Redux Toolkit Tutorials",
+                                "TanStack Query documentation"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "phaseNumber": 3,
+                    "phaseTitle": "Backend Architectures & Database Modeling",
+                    "estimatedDuration": "2 Months",
+                    "milestoneObjective": "Design structured relational schemas and build server-side interfaces.",
+                    "steps": [
+                        {
+                            "stepNumber": 3.1,
+                            "topic": "Server Implementations with Node.js & Express",
+                            "keySubtopics": [
+                                "Asynchronous runtime pipelines",
+                                "Custom middleware development",
+                                "RESTful API design principles",
+                                "Error propagation and status mappings"
+                            ],
+                            "actionPlan": "Build a decoupled REST API with full CRUD endpoints to handle transactions with appropriate validation and error codes.",
+                            "recommendedResources": [
+                                "Node.js learning guides",
+                                "Express.js API reference manual"
+                            ]
+                        },
+                        {
+                            "stepNumber": 3.2,
+                            "topic": "Data Modeling and Storage Engines",
+                            "keySubtopics": [
+                                "Relational architectures & constraints (PostgreSQL)",
+                                "NoSQL document systems (MongoDB)",
+                                "Database normalization vs denormalization",
+                                "Indexing execution plans"
+                            ],
+                            "actionPlan": "Write custom SQL database schemas, run migrations, and write query joins to support complex relational fetches for a backend platform.",
+                            "recommendedResources": [
+                                "PostgreSQL Official Tutorials",
+                                "MongoDB University courses"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "phaseNumber": 4,
+                    "phaseTitle": "Application Security & Deployment Workflows",
+                    "estimatedDuration": "1.5 Months",
+                    "milestoneObjective": "Implement authorization workflows, deploy applications, and construct continuous pipelines.",
+                    "steps": [
+                        {
+                            "stepNumber": 4.1,
+                            "topic": "API Security & Token Authentication",
+                            "keySubtopics": [
+                                "JSON Web Token (JWT) management",
+                                "Password salting & hashing (bcrypt)",
+                                "Cross-Origin Resource Sharing (CORS) rules",
+                                "HttpOnly cookies storage security"
+                            ],
+                            "actionPlan": "Add a secure authentication gate system with token rotation, storing session keys safely within secure client-side cookies.",
+                            "recommendedResources": [
+                                "OWASP Top 10 Web Risks Documentation",
+                                "Auth0 Secure Web App Guides"
+                            ]
+                        },
+                        {
+                            "stepNumber": 4.2,
+                            "topic": "Infrastructure Containerization & Hosting Pipelines",
+                            "keySubtopics": [
+                                "Dockerfile design blueprints",
+                                "Continuous deployment structures (GitHub Actions)",
+                                "Cloud host infrastructures (Render or AWS)",
+                                "Static assets storage"
+                            ],
+                            "actionPlan": "Write step-by-step pipeline configurations to compile and test components automatically, packaging assets inside minimal Docker containers.",
+                            "recommendedResources": [
+                                "Docker Getting Started manual",
+                                "GitHub Actions automation handbook"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "capstoneProjects": [
+                {
+                    "projectName": "Collaborative Agile Workspace Portal",
+                    "complexity": "Intermediate",
+                    "projectDescription": "Design and publish a Kanban task tracking platform utilizing a React client interface, Express.js server, and PostgreSQL DB. The platform handles team workspaces, drag-and-drop task items, dynamic state synchronization, and simple email notifications.",
+                    "coreSkillsValidated": [
+                        "Relational Schema Design",
+                        "React Context State",
+                        "API Service Building",
+                        "CSS Layout Optimization"
+                    ]
+                },
+                {
+                    "projectName": "E-Commerce Market Engine with MLOps Features",
+                    "complexity": "Advanced",
+                    "projectDescription": "Deploy a multi-vendor digital sales engine featuring secure credit transactions (Stripe API integration), AWS S3 file hosting, user authentication gates, and dynamic catalog filtering. Packaged with Docker, deployments are tracked through a configured CI/CD process to active cloud targets.",
+                    "coreSkillsValidated": [
+                        "API Integration & Payments",
+                        "S3 Asset Hosting",
+                        "Container Packaging (Docker)",
+                        "CI/CD Orchestration"
+                    ]
+                }
+            ],
+            "proTipsForSuccess": [
+                "Adopt TypeScript on both the backend and frontend to minimize runtime parameter validation flaws across execution boundaries.",
+                "Draft a formal API schema specification (OpenAPI/Swagger) first before executing backend controllers.",
+                "Verify performance early by using browser profiling engines and checking relational query execution metrics.",
+                "Write clear, granular, and structured commits within your repository using standardized branch nomenclature rules."
+            ]
+        }
     },
-    {
-        "title": "Mobile App Development",
-        "difficulty": "Intermediate",
-        "estimatedTimeCommitment": "6-8 Months",
-        "roadmap": [
-            {
-                "phaseNumber": 1,
-                "phaseTitle": "Core Programming and Layout Foundations",
-                "estimatedDuration": "1.5 Months",
-                "milestoneObjective": "Understand execution runtime semantics, platform layout engines, and compile static multi-view interfaces.",
-                "steps": [
-                    {
-                        "stepNumber": 1.1,
-                        "topic": "Platform-Specific Languages",
-                        "keySubtopics": [
-                            "Dart or TypeScript programming fundamentals",
-                            "Asynchronous mechanisms (Futures, Streams, Async/Await)",
-                            "Strict typing & object structures",
-                            "Package dependency managers"
-                        ],
-                        "actionPlan": "Write a modular command-line utility implementing object inheritance, file input-output systems, and external JSON API fetches.",
-                        "recommendedResources": [
-                            "Dart Official Language Guides",
-                            "TypeScript Deep Dive (Basarat)"
-                        ]
-                    },
-                    {
-                        "stepNumber": 1.2,
-                        "topic": "UI Layout Systems",
-                        "keySubtopics": [
-                            "Widget or component lifecycle hierarchies",
-                            "Flexbox layout models",
-                            "Platform viewport metrics & scaling",
-                            "Typography and accessibility rendering"
-                        ],
-                        "actionPlan": "Assemble a pixel-perfect, responsive client interface containing multi-view dashboards utilizing static data sets.",
-                        "recommendedResources": [
-                            "Flutter Architectural Design Guides",
-                            "React Native StyleSheet Documentation"
-                        ]
-                    }
-                ]
-            },
-            {
-                "phaseNumber": 2,
-                "phaseTitle": "State Architectures & Hardware Bridges",
-                "estimatedDuration": "2 Months",
-                "milestoneObjective": "Manage complex interactive application states and leverage mobile peripheral devices.",
-                "steps": [
-                    {
-                        "stepNumber": 2.1,
-                        "topic": "State Management & View Routing",
-                        "keySubtopics": [
-                            "Ephemeral vs global state engines",
-                            "Navigation stacks & structural routing",
-                            "State persistence frameworks (Bloc, Zustand, or Redux Toolkit)",
-                            "Local sandbox storage (SQLite or Hive)"
-                        ],
-                        "actionPlan": "Build a structured content management client integrating local storage features, full text filtering, and global search tracking.",
-                        "recommendedResources": [
-                            "Bloc Architecture guidelines",
-                            "Zustand State Management patterns"
-                        ]
-                    },
-                    {
-                        "stepNumber": 2.2,
-                        "topic": "Peripheral Hardware Integration",
-                        "keySubtopics": [
-                            "Permissions modeling (iOS Plist and Android Manifest)",
-                            "Geolocation tracking engines",
-                            "File system structures & media capture",
-                            "Local OS alert schedulers"
-                        ],
-                        "actionPlan": "Create an automated logger that tracks user geographic locations, records images via the camera, and saves persistent reference logs local to disk.",
-                        "recommendedResources": [
-                            "Expo Hardware API Manuals",
-                            "Flutter Plugin Ecosystem tutorials"
-                        ]
-                    }
-                ]
-            },
-            {
-                "phaseNumber": 3,
-                "phaseTitle": "API Communication & Device-Level Security",
-                "estimatedDuration": "1.5 Months",
-                "milestoneObjective": "Establish low-latency network connections and implement hardware-backed platform security workflows.",
-                "steps": [
-                    {
-                        "stepNumber": 3.1,
-                        "topic": "Server Handshakes & Socket Connections",
-                        "keySubtopics": [
-                            "API client abstractions (Dio, Axios)",
-                            "Interceptors, request throttling, & headers",
-                            "WebSocket pipelines",
-                            "Offline data synchronizers"
-                        ],
-                        "actionPlan": "Integrate a secure messaging dashboard that handles network dropouts seamlessly, syncing offline operations once network handshakes succeed.",
-                        "recommendedResources": [
-                            "MDN WebSockets Documentation",
-                            "Dio HTTP Client package specifications"
-                        ]
-                    },
-                    {
-                        "stepNumber": 3.2,
-                        "topic": "Mobile Identity & Safe Storage Protocols",
-                        "keySubtopics": [
-                            "Biometric validation APIs (FaceID, Fingerprint)",
-                            "iOS Keychain and Android Keystore cryptography",
-                            "Secure session token lifecycle",
-                            "Rooting / Jailbreak detection logic"
-                        ],
-                        "actionPlan": "Build an authentication flow utilizing hardware biometrics to access credential parameters housed securely inside the OS Keychain interface.",
-                        "recommendedResources": [
-                            "OWASP Mobile Application Security Verification Standard (MASVS)"
-                        ]
-                    }
-                ]
-            },
-            {
-                "phaseNumber": 4,
-                "phaseTitle": "Profiling, Native Bridges & Marketplace Releases",
-                "estimatedDuration": "1.5 Months",
-                "milestoneObjective": "Debug execution performance bottlenecks, author native system bindings, and compile release marketplace pipelines.",
-                "steps": [
-                    {
-                        "stepNumber": 4.1,
-                        "topic": "Native Code Access & Bridging Bridges",
-                        "keySubtopics": [
-                            "Method channels & Platform bridges",
-                            "Swift & Kotlin foundational syntax",
-                            "Third-party native SDK bindings",
-                            "Performance diagnostics & trace profiling"
-                        ],
-                        "actionPlan": "Author custom Swift and Kotlin modules that interface directly with host operating system diagnostics, exposing custom telemetry metrics to the UI thread.",
-                        "recommendedResources": [
-                            "Flutter Platform Channels tutorial",
-                            "React Native Native Module integrations handbook"
-                        ]
-                    },
-                    {
-                        "stepNumber": 4.2,
-                        "topic": "Release Engineering & Distribution Automation",
-                        "keySubtopics": [
-                            "Provisioning setups, certificates, & keystores",
-                            "Fastlane automated execution paths",
-                            "App Store Connect & Google Play Console mechanics",
-                            "Over-the-Air updates (OTA) strategies"
-                        ],
-                        "actionPlan": "Configure an automated workflow targeting both target marketplaces, signing packages using production profiles.",
-                        "recommendedResources": [
-                            "Fastlane Automation Documentation",
-                            "Apple Developer Guide and Google Play Console help center"
-                        ]
-                    }
-                ]
-            }
-        ],
-        "capstoneProjects": [
-            {
-                "projectName": "Offline-First Fitness Route Mapping Tracker",
-                "complexity": "Intermediate",
-                "projectDescription": "Construct a fitness route telemetry interface utilizing background geolocation processes, local persistent storage (Hive/SQLite), and offline-first map styling. Trigger timed hardware system notifications when milestones are breached.",
-                "coreSkillsValidated": [
-                    "Hardware Geolocation Tracking",
-                    "SQLite Relational Sync",
-                    "Background Daemon Processes",
-                    "OS Schedulers"
-                ]
-            },
-            {
-                "projectName": "Real-Time Digital Marketplace Client with Biometric Gateway",
-                "complexity": "Advanced",
-                "projectDescription": "Deploy a multi-merchant store layout with real-time bidding operations powered by WebSockets. Integrate biometrics-gated entry systems, secure device credential vaulting, user file uploads, Push alerting engines, and build pipeline automation via Fastlane.",
-                "coreSkillsValidated": [
-                    "Cryptographic OS Keychain",
-                    "Fastlane Continuous Build Pipeline",
-                    "Live Push Alert Services",
-                    "Bilateral WebSocket Sockets"
-                ]
-            }
-        ],
-        "proTipsForSuccess": [
-            "Prioritize viewport optimization; profile client render times using diagnostic memory tools to mitigate memory leaks.",
-            "Inject crash reporting frameworks (such as Crashlytics or Sentry) early in development to isolate errors occurring on diverse host builds.",
-            "Develop a functional understanding of native Swift and Kotlin mechanics; cross-platform abstractions inevitably necessitate custom native modules.",
-            "Minimize asset storage budgets: automate graphic resource minification pipelines to manage final release sizes."
-        ]
+    "mobile_app_development": {
+        "status": "False",
+        "roadmap": {
+            "title": "Mobile App Development",
+            "difficulty": "Intermediate",
+            "estimatedTimeCommitment": "6-8 Months",
+            "roadmap": [
+                {
+                    "phaseNumber": 1,
+                    "phaseTitle": "Core Programming and Layout Foundations",
+                    "estimatedDuration": "1.5 Months",
+                    "milestoneObjective": "Understand execution runtime semantics, platform layout engines, and compile static multi-view interfaces.",
+                    "steps": [
+                        {
+                            "stepNumber": 1.1,
+                            "topic": "Platform-Specific Languages",
+                            "keySubtopics": [
+                                "Dart or TypeScript programming fundamentals",
+                                "Asynchronous mechanisms (Futures, Streams, Async/Await)",
+                                "Strict typing & object structures",
+                                "Package dependency managers"
+                            ],
+                            "actionPlan": "Write a modular command-line utility implementing object inheritance, file input-output systems, and external JSON API fetches.",
+                            "recommendedResources": [
+                                "Dart Official Language Guides",
+                                "TypeScript Deep Dive (Basarat)"
+                            ]
+                        },
+                        {
+                            "stepNumber": 1.2,
+                            "topic": "UI Layout Systems",
+                            "keySubtopics": [
+                                "Widget or component lifecycle hierarchies",
+                                "Flexbox layout models",
+                                "Platform viewport metrics & scaling",
+                                "Typography and accessibility rendering"
+                            ],
+                            "actionPlan": "Assemble a pixel-perfect, responsive client interface containing multi-view dashboards utilizing static data sets.",
+                            "recommendedResources": [
+                                "Flutter Architectural Design Guides",
+                                "React Native StyleSheet Documentation"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "phaseNumber": 2,
+                    "phaseTitle": "State Architectures & Hardware Bridges",
+                    "estimatedDuration": "2 Months",
+                    "milestoneObjective": "Manage complex interactive application states and leverage mobile peripheral devices.",
+                    "steps": [
+                        {
+                            "stepNumber": 2.1,
+                            "topic": "State Management & View Routing",
+                            "keySubtopics": [
+                                "Ephemeral vs global state engines",
+                                "Navigation stacks & structural routing",
+                                "State persistence frameworks (Bloc, Zustand, or Redux Toolkit)",
+                                "Local sandbox storage (SQLite or Hive)"
+                            ],
+                            "actionPlan": "Build a structured content management client integrating local storage features, full text filtering, and global search tracking.",
+                            "recommendedResources": [
+                                "Bloc Architecture guidelines",
+                                "Zustand State Management patterns"
+                            ]
+                        },
+                        {
+                            "stepNumber": 2.2,
+                            "topic": "Peripheral Hardware Integration",
+                            "keySubtopics": [
+                                "Permissions modeling (iOS Plist and Android Manifest)",
+                                "Geolocation tracking engines",
+                                "File system structures & media capture",
+                                "Local OS alert schedulers"
+                            ],
+                            "actionPlan": "Create an automated logger that tracks user geographic locations, records images via the camera, and saves persistent reference logs local to disk.",
+                            "recommendedResources": [
+                                "Expo Hardware API Manuals",
+                                "Flutter Plugin Ecosystem tutorials"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "phaseNumber": 3,
+                    "phaseTitle": "API Communication & Device-Level Security",
+                    "estimatedDuration": "1.5 Months",
+                    "milestoneObjective": "Establish low-latency network connections and implement hardware-backed platform security workflows.",
+                    "steps": [
+                        {
+                            "stepNumber": 3.1,
+                            "topic": "Server Handshakes & Socket Connections",
+                            "keySubtopics": [
+                                "API client abstractions (Dio, Axios)",
+                                "Interceptors, request throttling, & headers",
+                                "WebSocket pipelines",
+                                "Offline data synchronizers"
+                            ],
+                            "actionPlan": "Integrate a secure messaging dashboard that handles network dropouts seamlessly, syncing offline operations once network handshakes succeed.",
+                            "recommendedResources": [
+                                "MDN WebSockets Documentation",
+                                "Dio HTTP Client package specifications"
+                            ]
+                        },
+                        {
+                            "stepNumber": 3.2,
+                            "topic": "Mobile Identity & Safe Storage Protocols",
+                            "keySubtopics": [
+                                "Biometric validation APIs (FaceID, Fingerprint)",
+                                "iOS Keychain and Android Keystore cryptography",
+                                "Secure session token lifecycle",
+                                "Rooting / Jailbreak detection logic"
+                            ],
+                            "actionPlan": "Build an authentication flow utilizing hardware biometrics to access credential parameters housed securely inside the OS Keychain interface.",
+                            "recommendedResources": [
+                                "OWASP Mobile Application Security Verification Standard (MASVS)"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "phaseNumber": 4,
+                    "phaseTitle": "Profiling, Native Bridges & Marketplace Releases",
+                    "estimatedDuration": "1.5 Months",
+                    "milestoneObjective": "Debug execution performance bottlenecks, author native system bindings, and compile release marketplace pipelines.",
+                    "steps": [
+                        {
+                            "stepNumber": 4.1,
+                            "topic": "Native Code Access & Bridging Bridges",
+                            "keySubtopics": [
+                                "Method channels & Platform bridges",
+                                "Swift & Kotlin foundational syntax",
+                                "Third-party native SDK bindings",
+                                "Performance diagnostics & trace profiling"
+                            ],
+                            "actionPlan": "Author custom Swift and Kotlin modules that interface directly with host operating system diagnostics, exposing custom telemetry metrics to the UI thread.",
+                            "recommendedResources": [
+                                "Flutter Platform Channels tutorial",
+                                "React Native Native Module integrations handbook"
+                            ]
+                        },
+                        {
+                            "stepNumber": 4.2,
+                            "topic": "Release Engineering & Distribution Automation",
+                            "keySubtopics": [
+                                "Provisioning setups, certificates, & keystores",
+                                "Fastlane automated execution paths",
+                                "App Store Connect & Google Play Console mechanics",
+                                "Over-the-Air updates (OTA) strategies"
+                            ],
+                            "actionPlan": "Configure an automated workflow targeting both target marketplaces, signing packages using production profiles.",
+                            "recommendedResources": [
+                                "Fastlane Automation Documentation",
+                                "Apple Developer Guide and Google Play Console help center"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "capstoneProjects": [
+                {
+                    "projectName": "Offline-First Fitness Route Mapping Tracker",
+                    "complexity": "Intermediate",
+                    "projectDescription": "Construct a fitness route telemetry interface utilizing background geolocation processes, local persistent storage (Hive/SQLite), and offline-first map styling. Trigger timed hardware system notifications when milestones are breached.",
+                    "coreSkillsValidated": [
+                        "Hardware Geolocation Tracking",
+                        "SQLite Relational Sync",
+                        "Background Daemon Processes",
+                        "OS Schedulers"
+                    ]
+                },
+                {
+                    "projectName": "Real-Time Digital Marketplace Client with Biometric Gateway",
+                    "complexity": "Advanced",
+                    "projectDescription": "Deploy a multi-merchant store layout with real-time bidding operations powered by WebSockets. Integrate biometrics-gated entry systems, secure device credential vaulting, user file uploads, Push alerting engines, and build pipeline automation via Fastlane.",
+                    "coreSkillsValidated": [
+                        "Cryptographic OS Keychain",
+                        "Fastlane Continuous Build Pipeline",
+                        "Live Push Alert Services",
+                        "Bilateral WebSocket Sockets"
+                    ]
+                }
+            ],
+            "proTipsForSuccess": [
+                "Prioritize viewport optimization; profile client render times using diagnostic memory tools to mitigate memory leaks.",
+                "Inject crash reporting frameworks (such as Crashlytics or Sentry) early in development to isolate errors occurring on diverse host builds.",
+                "Develop a functional understanding of native Swift and Kotlin mechanics; cross-platform abstractions inevitably necessitate custom native modules.",
+                "Minimize asset storage budgets: automate graphic resource minification pipelines to manage final release sizes."
+            ]
+        }
     },
-    {
-        "title": "Applied AI Engineer - Azure Cognitive Services",
-        "difficulty": "Advanced",
-        "estimatedTimeCommitment": "6 Months",
-        "roadmap": [
-            {
-                "phaseNumber": 1,
-                "phaseTitle": "Machine Learning & Deep Learning Foundations",
-                "estimatedDuration": "6 Weeks",
-                "milestoneObjective": "Build and fine-tune custom deep learning models locally using PyTorch and prepare them for cloud environments.",
-                "steps": [
-                    {
-                        "stepNumber": 1.1,
-                        "topic": "PyTorch Architecture & Model Training",
-                        "keySubtopics": [
-                            "Tensors",
-                            "Autograd",
-                            "Neural Network Layers",
-                            "Loss Functions",
-                            "Optimizers"
-                        ],
-                        "actionPlan": "Write a PyTorch training pipeline from scratch to classify text documents using a custom-defined neural network architecture.",
-                        "recommendedResources": [
-                            "PyTorch Tutorials: Deep Learning with PyTorch",
-                            "Fast.ai: Practical Deep Learning for Coders"
-                        ]
-                    },
-                    {
-                        "stepNumber": 1.2,
-                        "topic": "Transformer Architectures & Vector Embeddings",
-                        "keySubtopics": [
-                            "Self-Attention",
-                            "BERT",
-                            "GPT",
-                            "Tokenizers",
-                            "Embedding Spaces"
-                        ],
-                        "actionPlan": "Fine-tune a Hugging Face BERT-based model on a domain-specific dataset for multi-label classification, exporting the final model parameters.",
-                        "recommendedResources": [
-                            "Hugging Face NLP Course",
-                            "Attention Is All You Need (Vaswani et al.)"
-                        ]
-                    }
-                ]
-            },
-            {
-                "phaseNumber": 2,
-                "phaseTitle": "Azure AI Ecosystem Integration",
-                "estimatedDuration": "6 Weeks",
-                "milestoneObjective": "Consume, configure, and orchestrate pre-built Cognitive Services and Azure OpenAI models securely.",
-                "steps": [
-                    {
-                        "stepNumber": 2.1,
-                        "topic": "Azure Cognitive Services APIs",
-                        "keySubtopics": [
-                            "Azure AI Vision",
-                            "Azure AI Speech",
-                            "Language Service",
-                            "Azure Portal Provisioning"
-                        ],
-                        "actionPlan": "Build a multi-modal Python pipeline that ingests a video, extracts the audio, transcribes it via Speech API, and runs sentiment analysis on the text.",
-                        "recommendedResources": [
-                            "Microsoft Learn: Azure AI Services Documentation",
-                            "Azure SDK for Python GitHub Repo"
-                        ]
-                    },
-                    {
-                        "stepNumber": 2.2,
-                        "topic": "Azure OpenAI Service & Prompt Engineering",
-                        "keySubtopics": [
-                            "GPT-4 Engine",
-                            "System Prompts",
-                            "Few-Shot Learning",
-                            "Rate Limits",
-                            "Managed Identities"
-                        ],
-                        "actionPlan": "Write an enterprise-grade backend service that routes user requests to Azure OpenAI GPT-4 models, enforcing structured JSON output schemas via system parameters.",
-                        "recommendedResources": [
-                            "Microsoft Learn: Azure OpenAI Service",
-                            "DeepLearning.AI: ChatGPT Prompt Engineering for Developers"
-                        ]
-                    }
-                ]
-            },
-            {
-                "phaseNumber": 3,
-                "phaseTitle": "Retrieval-Augmented Generation (RAG) & Agents",
-                "estimatedDuration": "6 Weeks",
-                "milestoneObjective": "Architect and deploy custom knowledge-retrieval systems using vector databases and AI orchestrators.",
-                "steps": [
-                    {
-                        "stepNumber": 3.1,
-                        "topic": "Vector Databases & Hybrid Search",
-                        "keySubtopics": [
-                            "Azure AI Search",
-                            "Semantic Search",
-                            "Vectorization Indexing",
-                            "Cosine Similarity"
-                        ],
-                        "actionPlan": "Configure an Azure AI Search index, ingest a PDF dataset, auto-generate vector embeddings, and execute hybrid vector-plus-semantic queries.",
-                        "recommendedResources": [
-                            "Azure AI Search official documentation",
-                            "Pinecone Vector Database Guides"
-                        ]
-                    },
-                    {
-                        "stepNumber": 3.2,
-                        "topic": "AI Orchestration and Agents",
-                        "keySubtopics": [
-                            "Semantic Kernel",
-                            "LangChain",
-                            "Plugins & Tools",
-                            "Memory Management"
-                        ],
-                        "actionPlan": "Build an autonomous AI agent using Semantic Kernel that can parse email requests, query a database plugin, and generate personalized responses.",
-                        "recommendedResources": [
-                            "Microsoft Learn: Semantic Kernel for Dotnet/Python",
-                            "LangChain Documentation"
-                        ]
-                    }
-                ]
-            },
-            {
-                "phaseNumber": 4,
-                "phaseTitle": "LLMOps, Optimization, & Deployment",
-                "estimatedDuration": "6 Weeks",
-                "milestoneObjective": "Optimize models for low latency and manage end-to-end continuous integration pipelines for AI models.",
-                "steps": [
-                    {
-                        "stepNumber": 4.1,
-                        "topic": "Model Compilation & Runtime Optimization",
-                        "keySubtopics": [
-                            "ONNX Runtime",
-                            "Model Quantization (FP16/INT8)",
-                            "Triton Inference Server"
-                        ],
-                        "actionPlan": "Convert a PyTorch model into ONNX format, quantize it to INT8, and run high-throughput local benchmarks comparing inference latency.",
-                        "recommendedResources": [
-                            "ONNX Runtime documentation",
-                            "Hugging Face Optimum Guide"
-                        ]
-                    },
-                    {
-                        "stepNumber": 4.2,
-                        "topic": "Enterprise LLMOps & Monitoring",
-                        "keySubtopics": [
-                            "Azure ML Prompt Flow",
-                            "Model Evaluation Metrics",
-                            "App Insights",
-                            "Content Safety Filters"
-                        ],
-                        "actionPlan": "Deploy an LLM pipeline using Azure ML Prompt Flow, configure content safety filters for toxic inputs, and build a monitoring dashboard in Azure Application Insights.",
-                        "recommendedResources": [
-                            "Microsoft Learn: Azure Machine Learning Prompt Flow",
-                            "Responsible AI Principles by Microsoft"
-                        ]
-                    }
-                ]
-            }
-        ],
-        "capstoneProjects": [
-            {
-                "projectName": "Enterprise Intelligence Assistant",
-                "complexity": "Intermediate",
-                "projectDescription": "A conversational compliance assistant that ingests corporate PDFs, stores them in Azure AI Search, uses Semantic Kernel to handle user intents, and queries Azure OpenAI to output compliant, cited answers.",
-                "coreSkillsValidated": [
-                    "Azure AI Search",
-                    "Semantic Kernel",
-                    "Azure OpenAI",
-                    "System Prompts"
-                ]
-            },
-            {
-                "projectName": "Ultra-Low Latency Defect Detection Engine",
-                "complexity": "Advanced",
-                "projectDescription": "A high-performance system utilizing a custom object-detection model converted to ONNX, deployed on Azure Kubernetes Service (AKS) behind a Triton Inference Server, handling real-time image analysis.",
-                "coreSkillsValidated": [
-                    "ONNX Runtime",
-                    "Triton Inference Server",
-                    "Azure Kubernetes Service",
-                    "PyTorch Model Export"
-                ]
-            }
-        ],
-        "proTipsForSuccess": [
-            "Never hardcode secrets or API keys. Always use Azure Managed Identities and Azure Key Vault for authorization.",
-            "Pay attention to token limit ceilings and request throttling by implementing exponential backoff policies in your API calls.",
-            "Always run offline quantitative evaluations (e.g., Groundedness, Relevance) before moving LLM application versions to production environments."
-        ]
+    "applied_ai_engineer_-_azure_cognitive_services": {
+        "status": "None",
+        "roadmap": {
+            "title": "Applied AI Engineer - Azure Cognitive Services",
+            "difficulty": "Advanced",
+            "estimatedTimeCommitment": "6 Months",
+            "roadmap": [
+                {
+                    "phaseNumber": 1,
+                    "phaseTitle": "Machine Learning & Deep Learning Foundations",
+                    "estimatedDuration": "6 Weeks",
+                    "milestoneObjective": "Build and fine-tune custom deep learning models locally using PyTorch and prepare them for cloud environments.",
+                    "steps": [
+                        {
+                            "stepNumber": 1.1,
+                            "topic": "PyTorch Architecture & Model Training",
+                            "keySubtopics": [
+                                "Tensors",
+                                "Autograd",
+                                "Neural Network Layers",
+                                "Loss Functions",
+                                "Optimizers"
+                            ],
+                            "actionPlan": "Write a PyTorch training pipeline from scratch to classify text documents using a custom-defined neural network architecture.",
+                            "recommendedResources": [
+                                "PyTorch Tutorials: Deep Learning with PyTorch",
+                                "Fast.ai: Practical Deep Learning for Coders"
+                            ]
+                        },
+                        {
+                            "stepNumber": 1.2,
+                            "topic": "Transformer Architectures & Vector Embeddings",
+                            "keySubtopics": [
+                                "Self-Attention",
+                                "BERT",
+                                "GPT",
+                                "Tokenizers",
+                                "Embedding Spaces"
+                            ],
+                            "actionPlan": "Fine-tune a Hugging Face BERT-based model on a domain-specific dataset for multi-label classification, exporting the final model parameters.",
+                            "recommendedResources": [
+                                "Hugging Face NLP Course",
+                                "Attention Is All You Need (Vaswani et al.)"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "phaseNumber": 2,
+                    "phaseTitle": "Azure AI Ecosystem Integration",
+                    "estimatedDuration": "6 Weeks",
+                    "milestoneObjective": "Consume, configure, and orchestrate pre-built Cognitive Services and Azure OpenAI models securely.",
+                    "steps": [
+                        {
+                            "stepNumber": 2.1,
+                            "topic": "Azure Cognitive Services APIs",
+                            "keySubtopics": [
+                                "Azure AI Vision",
+                                "Azure AI Speech",
+                                "Language Service",
+                                "Azure Portal Provisioning"
+                            ],
+                            "actionPlan": "Build a multi-modal Python pipeline that ingests a video, extracts the audio, transcribes it via Speech API, and runs sentiment analysis on the text.",
+                            "recommendedResources": [
+                                "Microsoft Learn: Azure AI Services Documentation",
+                                "Azure SDK for Python GitHub Repo"
+                            ]
+                        },
+                        {
+                            "stepNumber": 2.2,
+                            "topic": "Azure OpenAI Service & Prompt Engineering",
+                            "keySubtopics": [
+                                "GPT-4 Engine",
+                                "System Prompts",
+                                "Few-Shot Learning",
+                                "Rate Limits",
+                                "Managed Identities"
+                            ],
+                            "actionPlan": "Write an enterprise-grade backend service that routes user requests to Azure OpenAI GPT-4 models, enforcing structured JSON output schemas via system parameters.",
+                            "recommendedResources": [
+                                "Microsoft Learn: Azure OpenAI Service",
+                                "DeepLearning.AI: ChatGPT Prompt Engineering for Developers"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "phaseNumber": 3,
+                    "phaseTitle": "Retrieval-Augmented Generation (RAG) & Agents",
+                    "estimatedDuration": "6 Weeks",
+                    "milestoneObjective": "Architect and deploy custom knowledge-retrieval systems using vector databases and AI orchestrators.",
+                    "steps": [
+                        {
+                            "stepNumber": 3.1,
+                            "topic": "Vector Databases & Hybrid Search",
+                            "keySubtopics": [
+                                "Azure AI Search",
+                                "Semantic Search",
+                                "Vectorization Indexing",
+                                "Cosine Similarity"
+                            ],
+                            "actionPlan": "Configure an Azure AI Search index, ingest a PDF dataset, auto-generate vector embeddings, and execute hybrid vector-plus-semantic queries.",
+                            "recommendedResources": [
+                                "Azure AI Search official documentation",
+                                "Pinecone Vector Database Guides"
+                            ]
+                        },
+                        {
+                            "stepNumber": 3.2,
+                            "topic": "AI Orchestration and Agents",
+                            "keySubtopics": [
+                                "Semantic Kernel",
+                                "LangChain",
+                                "Plugins & Tools",
+                                "Memory Management"
+                            ],
+                            "actionPlan": "Build an autonomous AI agent using Semantic Kernel that can parse email requests, query a database plugin, and generate personalized responses.",
+                            "recommendedResources": [
+                                "Microsoft Learn: Semantic Kernel for Dotnet/Python",
+                                "LangChain Documentation"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "phaseNumber": 4,
+                    "phaseTitle": "LLMOps, Optimization, & Deployment",
+                    "estimatedDuration": "6 Weeks",
+                    "milestoneObjective": "Optimize models for low latency and manage end-to-end continuous integration pipelines for AI models.",
+                    "steps": [
+                        {
+                            "stepNumber": 4.1,
+                            "topic": "Model Compilation & Runtime Optimization",
+                            "keySubtopics": [
+                                "ONNX Runtime",
+                                "Model Quantization (FP16/INT8)",
+                                "Triton Inference Server"
+                            ],
+                            "actionPlan": "Convert a PyTorch model into ONNX format, quantize it to INT8, and run high-throughput local benchmarks comparing inference latency.",
+                            "recommendedResources": [
+                                "ONNX Runtime documentation",
+                                "Hugging Face Optimum Guide"
+                            ]
+                        },
+                        {
+                            "stepNumber": 4.2,
+                            "topic": "Enterprise LLMOps & Monitoring",
+                            "keySubtopics": [
+                                "Azure ML Prompt Flow",
+                                "Model Evaluation Metrics",
+                                "App Insights",
+                                "Content Safety Filters"
+                            ],
+                            "actionPlan": "Deploy an LLM pipeline using Azure ML Prompt Flow, configure content safety filters for toxic inputs, and build a monitoring dashboard in Azure Application Insights.",
+                            "recommendedResources": [
+                                "Microsoft Learn: Azure Machine Learning Prompt Flow",
+                                "Responsible AI Principles by Microsoft"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "capstoneProjects": [
+                {
+                    "projectName": "Enterprise Intelligence Assistant",
+                    "complexity": "Intermediate",
+                    "projectDescription": "A conversational compliance assistant that ingests corporate PDFs, stores them in Azure AI Search, uses Semantic Kernel to handle user intents, and queries Azure OpenAI to output compliant, cited answers.",
+                    "coreSkillsValidated": [
+                        "Azure AI Search",
+                        "Semantic Kernel",
+                        "Azure OpenAI",
+                        "System Prompts"
+                    ]
+                },
+                {
+                    "projectName": "Ultra-Low Latency Defect Detection Engine",
+                    "complexity": "Advanced",
+                    "projectDescription": "A high-performance system utilizing a custom object-detection model converted to ONNX, deployed on Azure Kubernetes Service (AKS) behind a Triton Inference Server, handling real-time image analysis.",
+                    "coreSkillsValidated": [
+                        "ONNX Runtime",
+                        "Triton Inference Server",
+                        "Azure Kubernetes Service",
+                        "PyTorch Model Export"
+                    ]
+                }
+            ],
+            "proTipsForSuccess": [
+                "Never hardcode secrets or API keys. Always use Azure Managed Identities and Azure Key Vault for authorization.",
+                "Pay attention to token limit ceilings and request throttling by implementing exponential backoff policies in your API calls.",
+                "Always run offline quantitative evaluations (e.g., Groundedness, Relevance) before moving LLM application versions to production environments."
+            ]
+        }
     }
-]
+}
