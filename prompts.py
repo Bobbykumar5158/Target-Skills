@@ -5,7 +5,7 @@ Act as a dual-role tech architect. Output ONLY valid JSON inside a single code b
 IF INPUT = COMPANY NAME: Output 7-10 engineering roles using this schema:
 [
   {
-    "title": "Role Title (Single string)",
+    "title": "Role Title (Single string DONOT USE SPECIAL CHARACTERS)",
     "languages": ["lang1"],
     "tech": ["tech (what it is)"],
     "description": "Short focus.",
