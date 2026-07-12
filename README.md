@@ -19,7 +19,6 @@ An interactive web application designed to bridge the gap between job seekers an
 
 * **Company Skill Stack Discovery:** Search for top-tier companies and instantly pull their current tech stack, core competencies, and framework requirements.
 * **AI-Powered Personalized Roadmaps:** Choose any specific skill and generate an interactive, step-by-step milestone curriculum custom-tailored to your current level.
-* **Interactive Progress Tracker:** Track your active learning journeys with high-contrast, clean visual milestones, subtopics, and direct actionable execution plans.
 * **Curated Repositories & Study Guides:** Access handpicked, lightweight open-source repositories and study guides dynamically paired with each roadmap phase.
 * **Visual Capstone Validation:** Validate your knowledge by completing specific terminal project targets recommended for each track.
 ---
@@ -117,7 +116,20 @@ http://127.0.0.1:8080
 ---
 
 # 📸 Screenshots
+## Home Page
+<img width="1535" height="883" alt="image" src="https://github.com/user-attachments/assets/7b71cac6-93d0-4c3d-be72-632ebef299ed" />
 
+## Explore Page
+<img width="1532" height="880" alt="image" src="https://github.com/user-attachments/assets/7b5f2485-aac3-4497-9619-a119120ebaec" />
+
+## Explore Page Result
+<img width="1531" height="880" alt="image" src="https://github.com/user-attachments/assets/dea10320-f8aa-45a4-a794-a607a90f61fd" />
+
+## JOB Role Details
+<img width="1531" height="880" alt="image" src="https://github.com/user-attachments/assets/dcabf5fa-cfd9-4f5a-a4fd-eab4d93817d5" />
+
+## Dashboard
+<img width="1531" height="877" alt="image" src="https://github.com/user-attachments/assets/fb9567f8-060b-4e87-bc87-d78689007cf0" />
 
 
 ---
