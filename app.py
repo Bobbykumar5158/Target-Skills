@@ -81,7 +81,7 @@ def roadmap():
             )
         task.start()
 
-        roadmaps = read_data()
+        roadmaps = read_data(user_file)
         title_key = role.lower().replace(" ", "_")
         roadmaps[title_key] = {
             "status" : "False",
