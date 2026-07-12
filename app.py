@@ -3,31 +3,38 @@ from genai import bot
 import json
 import os
 import threading
+import time
 
 app = Flask(__name__)
 app.secret_key = "secrect_key"
 
-def generate_roadmap(role_title):
-
-    filepath = "data/user.json"
-    if os.path.exists(filepath) and os.path.getsize(filepath) > 0:
-        try:
-            with open(filepath, "r") as file:
-                roadmaps = json.load(file)
-        except json.JSONDecodeError:
-            roadmaps = {"title" : []}
-    else:
-        roadmaps = []
-
-    response = json.loads(bot(role_title))
-    roadmap = response["response"]
-    with open("data/user.json","w") as file:
-        if roadmaps:
-            roadmaps.append(roadmap)
-            json.dump(roadmaps,file,indent=4)
+def generate_roadmap(role_title,attempt = 3):
+    
+    if attempt != 0 :
+        filepath = "data/user.json"
+        if os.path.exists(filepath) and os.path.getsize(filepath) > 0:
+            try:
+                with open(filepath, "r") as file:
+                    roadmaps = json.load(file)
+            except json.JSONDecodeError:
+                roadmaps = {"title" : []}
         else:
-            json.dump([roadmap],file,indent=4)
-        print("done")
+            roadmaps = []
+
+        response = json.loads(bot(role_title))
+        if response["status_code"] == 200:
+            roadmap = response["response"]
+        else:
+            time.sleep(10)
+            generate_roadmap(role_title,attempt-1)
+            
+        with open("data/user.json","w") as file:
+            if roadmaps:
+                roadmaps.append(roadmap)
+                json.dump(roadmaps,file,indent=4)
+            else:
+                json.dump([roadmap],file,indent=4)
+            print("done")
         
             
 
@@ -50,12 +57,14 @@ def explore():
         if roles_data.get("company", "").lower() == company_name.lower():
             fetched_data = roles_data.get("response", [])
         else:
-            # will call bot here
             bot_data = json.loads(bot(company_name))
-            bot_data["company"] = company_name
-            fetched_data = bot_data["response"]
-            with open('data/roles.json','w') as file:
-                json.dump(bot_data,file)
+            if bot_data["status_code"] == 200:
+                bot_data["company"] = company_name
+                fetched_data = bot_data["response"]
+                with open('data/roles.json','w') as file:
+                    json.dump(bot_data,file)
+            else:
+                return render_template('error.html',response = bot_data)
 
 
 

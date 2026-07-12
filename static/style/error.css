@@ -1,0 +1,67 @@
+.error-container {
+  max-width: 600px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error-graphic {
+  font-size: 72px;
+  margin-bottom: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.error-code {
+  font-size: 96px;
+  font-weight: 800;
+  color: #0f172a;
+  /* Deep slate */
+  margin: 0;
+  line-height: 1;
+}
+
+.error-message {
+  font-size: 24px;
+  font-weight: 600;
+  color: #334155;
+  margin: 10px 0 20px 0;
+}
+
+.error-description {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Styled Action Button */
+.back-btn {
+  display: inline-block;
+  background-color: #1A2A47;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Subtle animation floating effect for the graphic */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
