@@ -28,6 +28,7 @@ An interactive web application designed to bridge the gap between job seekers an
 ### Frontend
 - HTML5
 - CSS3
+- Javascript
 - Jinja2 Templates
 
 ### Backend
